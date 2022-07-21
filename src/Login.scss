@@ -1,9 +1,11 @@
+$main: #0D3F7A;
+
 .rect {
     position: absolute;
     width: 497px;
     height: 27px;
     left: 85px;
-    background: #0D3F7A;
+    background: $main;
 }
 
 .word {
@@ -71,11 +73,16 @@
     border: 1px solid #D8D8D8;
 }
 
-.log {
+.logbtn {
     position: absolute;
     width: 315px;
     height: 65px;
-    left: 181px;
-    top: 798px;
-    background: #0D3F7A;
+    left: 190px;
+    top: 670px;
+    background: $main;
+
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: white;
 }
