@@ -1,8 +1,15 @@
-import Login from './Login.js';
+import { useState } from 'react';
+import Modal from './Modal';
 
 function App() {
+  let [modal, setModal] = useState(false);
+
   return (
-    <Login />
+    <div>
+      <button className='btn' onClick={() => setModal(!modal)}>로그인</button>
+      {modal === true ? <Modal /> : null}
+    </div>
+
   );
 };
 
