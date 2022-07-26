@@ -66,7 +66,7 @@ $main: #0D3F7A;
     box-sizing: border-box;
     position: absolute;
     width: 315px;
-    height: 210px;
+    height: 260px;
     left: 190px;
     top: 430px;
     background: #E0E9FF;
@@ -78,11 +78,15 @@ $main: #0D3F7A;
     width: 315px;
     height: 65px;
     left: 190px;
-    top: 670px;
+    top: 720px;
     background: $main;
 
     font-weight: 400;
     font-size: 30px;
     line-height: 36px;
     color: white;
+}
+
+textarea {
+    resize: none;
 }
