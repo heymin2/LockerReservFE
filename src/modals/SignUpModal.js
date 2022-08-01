@@ -10,7 +10,7 @@ const SignUpModal = ({ show, onHide }) => {
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
-        >
+        >   <div className='rect' />
             <p className="word">사물함 로그인</p>
             <form>
                 <input type="text" name="Num" className="num" placeholder='학번 ex)22121234' minLength="8" maxLength="8" />
