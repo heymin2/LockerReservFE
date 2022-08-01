@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import PIC from '../PIC';
-
+import { BsXLg } from "react-icons/bs";
 const SignUpModal = ({ show, onHide }) => {
     return (
         <Modal
@@ -20,7 +20,7 @@ const SignUpModal = ({ show, onHide }) => {
                 <input type="submit" className="logbtn"></input>
             </form>
             <Modal.Footer>
-                <Button onClick={onHide}>닫기</Button>
+                <Button className="xbtn" onClick={onHide}><BsXLg /></Button>
             </Modal.Footer>
         </Modal>
     )
