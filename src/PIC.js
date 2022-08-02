@@ -1,4 +1,8 @@
 function PIC() {
+    function handleSubmit(e) {
+        e.preventDefault();
+        alert('개인정보 취급방침 미동의시 로그인 불가능');
+    }
     return (
         <div className="PIC">
             <span style={{ color: 'blue' }}>* 아래 약관을 읽은 후 이용가능합니다.</span>
@@ -14,10 +18,10 @@ function PIC() {
                 <div style={{ textAlign: 'center' }}><b>개인정보 취급방침에 동의하십니까?</b>
                     <div className="radio-wrapper" style={{ textAlign: 'center' }}>
                         <label id="privacy-text1">
-                            <input type="radio" id="agree" name="privacy" value="agree" /> 동의함
+                            <input type="radio" id="agree" name="privacy" value="agree" checked="checked" /> 동의함
                         </label>
                         <label id="privacy-text2">
-                            <input type="radio" id="disagree" name="privacy" value="disagree" checked="checked" /> 동의안함
+                            <input type="radio" id="disagree" name="privacy" value="disagree" onClick={handleSubmit} /> 동의안함
                         </label>
                     </div>
                 </div>
