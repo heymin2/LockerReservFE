@@ -8,7 +8,10 @@ const CancelModal = ({ show, onHide }) => {
     const [inputPass2, setInputPass2] = useState('')
 
     const HandleInputPass2 = (e) => {
-        setInputPass2(e.target.value)
+        const regex = /^[0-9]{0,13}$/;
+        if (regex.test(e.target.value)) {
+            setInputPass2(e.target.value);
+        }
     }
 
     let body = {

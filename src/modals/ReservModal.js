@@ -9,11 +9,17 @@ const SignUpModal = ({ show, onHide }) => {
     const [inputNum2, setInputNum2] = useState('')
 
     const HandleInputPass = (e) => {
-        setInputPass(e.target.value)
+        const regex = /^[0-9]{0,13}$/;
+        if (regex.test(e.target.value)) {
+            setInputPass(e.target.value);
+        }
     }
 
     const HandleInputNum2 = (e) => {
-        setInputNum2(e.target.value)
+        const regex = /^[0-9]{0,13}$/;
+        if (regex.test(e.target.value)) {
+            setInputNum2(e.target.value);
+        }
     }
 
     let body = {
