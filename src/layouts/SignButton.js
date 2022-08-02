@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import SignUpModal from '../modals/SignUpModal';
+import LoginModal from '../modals/LoginModal';
 import { Button } from "react-bootstrap";
 
 const SignButton = () => {
     const [signUpModalOn, setSignUpModalOn] = useState(false);
     return (
         <>
-            <SignUpModal
+            <LoginModal
                 show={signUpModalOn}
                 onHide={() => setSignUpModalOn(false)}
             />

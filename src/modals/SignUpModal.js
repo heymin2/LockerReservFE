@@ -4,6 +4,7 @@ import PIC from '../PIC';
 import Login from '../scss/Login.scss';
 import { BsXLg } from "react-icons/bs";
 const SignUpModal = ({ show, onHide }) => {
+
     return (
         <Modal
             show={show}
