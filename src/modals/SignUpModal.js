@@ -5,6 +5,7 @@ import { BsXLg } from "react-icons/bs";
 const SignUpModal = ({ show, onHide }) => {
     return (
         <Modal
+            className='modalBody'
             show={show}
             onHide={onHide}
             size="lg"
@@ -25,5 +26,6 @@ const SignUpModal = ({ show, onHide }) => {
         </Modal>
     )
 }
+
 
 export default SignUpModal
