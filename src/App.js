@@ -1,5 +1,6 @@
 import SignButton from './layouts/SignButton';
 import ReservButton from './layouts/ReservButton';
+import CancelButton from './layouts/CancelButton';
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <div>
       <SignButton />
       <ReservButton />
+      <CancelButton />
     </div>
   );
 };

@@ -20,7 +20,7 @@ const SignUpModal = ({ show, onHide }) => {
                         <input type="text" name="Name" className="name" placeholder='이름 ex)김컴공' minLength="4" />
                         <input type="tel" name="phoneNum" className="phoneNum" placeholder='전화번호 ex)01012345078' minLength="11" maxLength="11" />
                         <PIC />
-                        <input type="submit" className="logbtn"></input>
+                        <input type="submit" className="logbtn" value="로그인"></input>
                     </form>
                     <Modal.Footer>
                         <Button className="xbtn" onClick={onHide}><BsXLg /></Button>
