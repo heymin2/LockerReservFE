@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import ReservModal from '../modals/ReservModal';
-import Reserv from '../scss/Reserv.scss';
 import { Button } from "react-bootstrap";
 
 const ReservButton = () => {

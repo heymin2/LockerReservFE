@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import SignUpModal from '../modals/SignUpModal';
-import Login from '../scss/Login.scss';
 import { Button } from "react-bootstrap";
 
 const SignButton = () => {
