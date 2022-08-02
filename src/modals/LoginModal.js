@@ -20,12 +20,17 @@ const LoginModal = ({ show, onHide }) => {
         setInputPhone(e.target.value)
     }
 
-    useEffect(() => {
-        axios.get('/user_inform/login')
+    const onClickLogin = () => {
+        axios.post('http://54.180.92.126:5000/login', null, {
+            params: {
+                'studentID': inputNum,
+                'name': inputName,
+                'phone': inputPhone
+            }
+        })
             .then(res => console.log(res))
             .catch()
-    },
-        [])
+    }
 
     return (
         <Modal
@@ -40,17 +45,17 @@ const LoginModal = ({ show, onHide }) => {
                     <p className="word">사물함 로그인</p>
                     <form>
                         <input type="text" name="Num" className="num" value={inputNum} onChange={HandleInputNum} placeholder='학번 ex)22121234' minLength="8" maxLength="8" required />
-                        <input type="text" name="Name" className="name" value={inputName} onChange={HandleInputName} placeholder='이름 ex)김컴공' minLength="4" required />
+                        <input type="text" name="Name" className="name" value={inputName} onChange={HandleInputName} placeholder='이름 ex)김컴공' minLength="3" required />
                         <input type="tel" name="phoneNum" className="phoneNum" value={inputPhone} onChange={HandleInputPhone} placeholder='전화번호 ex)01012345078' minLength="11" maxLength="11" required />
                         <PIC />
-                        <input type="submit" className="logbtn" value="로그인"></input>
+                        <input type="submit" className="logbtn" onClick={onClickLogin} value="로그인"></input>
                     </form>
                     <Modal.Footer>
                         <Button className="xbtn" onClick={onHide}><BsXLg /></Button>
                     </Modal.Footer>
                 </div>
             </div>
-        </Modal>
+        </Modal >
     )
 }
 

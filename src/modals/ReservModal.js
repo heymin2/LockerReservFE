@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { BsXLg } from "react-icons/bs";
 import Reserv from '../scss/Reserv.scss';
 
 const SignUpModal = ({ show, onHide }) => {
+    const [inputPass, setInputPass] = useState('')
+    const [inputNum2, setInputNum2] = useState('')
+
+    const HandleInputPass = (e) => {
+        setInputPass(e.target.value)
+    }
+
+    const HandleInputNum2 = (e) => {
+        setInputNum2(e.target.value)
+    }
+
+
     return (
         <Modal
             show={show}
