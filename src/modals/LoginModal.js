@@ -6,9 +6,6 @@ import { BsXLg } from "react-icons/bs";
 import axios from 'axios';
 
 const LoginModal = ({ show, onHide }) => {
-    let form = new FormData()
-
-
     const [inputNum, setInputNum] = useState('')
     const [inputName, setInputName] = useState('')
     const [inputPhone, setInputPhone] = useState('')
@@ -23,20 +20,16 @@ const LoginModal = ({ show, onHide }) => {
         setInputPhone(e.target.value)
     }
 
-    form.append('studentID', inputNum)
-    form.append('name', inputName)
-    form.append('phone', inputPhone)
+    let body = {
+        studentID: inputNum,
+        name: inputName,
+        phone: inputPhone
+    };
 
     const onClickLogin = () => {
-        axios({
-            method: 'post',
-            url: 'http://54.180.92.126:5000/login',
-            data: form,
-            headers: { 'Content-Type': 'multipart/form-data' }
-        })
-            .then(res => console.log(res))
-            .catch(err => console.log('실패'))
-    }
+        axios.post("http://13.125.255.247:5000/login", body)
+            .then((res) => console.log(res));
+    };
 
     return (
         <Modal
@@ -52,7 +45,7 @@ const LoginModal = ({ show, onHide }) => {
                     <form>
                         <input type="text" name="Num" className="num" value={inputNum} onChange={HandleInputNum} placeholder='학번 ex)22121234' minLength="8" maxLength="8" required />
                         <input type="text" name="Name" className="name" value={inputName} onChange={HandleInputName} placeholder='이름 ex)김컴공' minLength="3" required />
-                        <input type="tel" name="phoneNum" className="phoneNum" value={inputPhone} onChange={HandleInputPhone} placeholder='전화번호 ex)01012345078' minLength="11" maxLength="11" required />
+                        <input type="tel" name="phoneNum" className="phoneNum" value={inputPhone} onChange={HandleInputPhone} placeholder='전화번호 ex)01012345078' minLength="8" maxLength="11" required />
                         <PIC />
                         <input type="submit" className="logbtn" onClick={onClickLogin} value="로그인"></input>
                     </form>
