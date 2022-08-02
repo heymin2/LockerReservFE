@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import PIC from '../PIC';
 import Login from '../scss/Login.scss';
@@ -6,6 +6,9 @@ import { BsXLg } from "react-icons/bs";
 import axios from 'axios';
 
 const LoginModal = ({ show, onHide }) => {
+    let form = new FormData()
+
+
     const [inputNum, setInputNum] = useState('')
     const [inputName, setInputName] = useState('')
     const [inputPhone, setInputPhone] = useState('')
@@ -20,16 +23,19 @@ const LoginModal = ({ show, onHide }) => {
         setInputPhone(e.target.value)
     }
 
+    form.append('studentID', inputNum)
+    form.append('name', inputName)
+    form.append('phone', inputPhone)
+
     const onClickLogin = () => {
-        axios.post('http://54.180.92.126:5000/login', null, {
-            params: {
-                'studentID': inputNum,
-                'name': inputName,
-                'phone': inputPhone
-            }
+        axios({
+            method: 'post',
+            url: 'http://54.180.92.126:5000/login',
+            data: form,
+            headers: { 'Content-Type': 'multipart/form-data' }
         })
             .then(res => console.log(res))
-            .catch()
+            .catch(err => console.log('실패'))
     }
 
     return (
