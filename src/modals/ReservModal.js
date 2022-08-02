@@ -4,12 +4,13 @@ import { BsXLg } from "react-icons/bs";
 const SignUpModal = ({ show, onHide }) => {
     return (
         <Modal
+            className='modalBody2'
             show={show}
             onHide={onHide}
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
-        >   <div className='rect' />
+        >   <div className='rect2' />
             <p className="word2">사물함 예약</p>
             <form>
                 <p className="res">선택한 사물함</p>

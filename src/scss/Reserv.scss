@@ -1,17 +1,15 @@
-.rect {
+.rect2 {
     position: absolute;
-    width: 360px;
+    width: 380px;
     height: 27px;
-    left: 85px;
-    top: 50px;
+    left: 0px;
+    top: 0px;
     background: #0D3F7A;
 }
 
 .word2 {
     position: absolute;
-    height: 50px;
-    left: 170px;
-    top: 60px;
+    left: 90px;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 30px;
@@ -22,8 +20,8 @@
     box-sizing: border-box;
     width: 300px;
     height: 100px;
-    left: 120px;
-    top: 130px;
+    left: 40px;
+    top: 120px;
     font-family: 'Inter';
     font-size: 20px;
     text-align: center;
@@ -36,8 +34,8 @@
     box-sizing: border-box;
     width: 300px;
     height: 50px;
-    left: 120px;
-    top: 270px;
+    left: 40px;
+    top: 260px;
     font-family: 'Inter';
     font-size: 20px;
     text-align: center;
@@ -50,8 +48,8 @@
     box-sizing: border-box;
     width: 300px;
     height: 50px;
-    left: 120px;
-    top: 340px;
+    left: 40px;
+    top: 330px;
     font-family: 'Inter';
     font-size: 20px;
     text-align: center;
@@ -64,8 +62,8 @@
     box-sizing: border-box;
     width: 300px;
     height: 100px;
-    left: 120px;
-    top: 390px;
+    left: 40px;
+    top: 380px;
     font-family: 'Inter';
     font-size: 20px;
     text-align: center;
@@ -79,12 +77,24 @@
     position: absolute;
     width: 300px;
     height: 50px;
-    left: 120px;
-    top: 530px;
+    left: 40px;
+    top: 520px;
     background: #0D3F7A;
 
     font-weight: 400;
     font-size: 30px;
     line-height: 36px;
     color: white;
+}
+
+.modalBody2 {
+    position: absolute;
+    width: 300px;
+    height: 520px;
+    left: 50px;
+    top: 50px;
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
 }
