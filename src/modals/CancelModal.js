@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { BsXLg } from "react-icons/bs";
 import Cancel from '../scss/Cancel.scss';
+import axios from 'axios';
 
 const CancelModal = ({ show, onHide }) => {
     const [inputPass2, setInputPass2] = useState('')
@@ -9,6 +10,15 @@ const CancelModal = ({ show, onHide }) => {
     const HandleInputPass2 = (e) => {
         setInputPass2(e.target.value)
     }
+
+    let body = {
+        pass: inputPass2
+    };
+
+    const onClickLogin = () => {
+        axios.post("http://13.125.255.247:5000/login", body)
+            .then((res) => console.log(res));
+    };
 
     return (
         <Modal

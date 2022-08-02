@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { BsXLg } from "react-icons/bs";
 import Reserv from '../scss/Reserv.scss';
+import axios from 'axios';
 
 const SignUpModal = ({ show, onHide }) => {
     const [inputPass, setInputPass] = useState('')
@@ -15,6 +16,15 @@ const SignUpModal = ({ show, onHide }) => {
         setInputNum2(e.target.value)
     }
 
+    let body = {
+        studentID: inputNum2,
+        pass: inputPass
+    };
+
+    const onClickLogin = () => {
+        axios.post("http://13.125.255.247:5000/login", body)
+            .then((res) => console.log(res));
+    };
 
     return (
         <Modal
