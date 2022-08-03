@@ -50,12 +50,12 @@ const LoginModal = ({ show, onHide }) => {
                 <div className='modalBody'>
                     <div className='rect' />
                     <p className="word">사물함 로그인</p>
-                    <form>
+                    <form method="post">
                         <input type="text" name="Num" className="num" value={inputNum} onChange={HandleInputNum} placeholder='학번 ex)22121234' minLength="8" maxLength="8" required />
                         <input type="text" name="Name" className="name" value={inputName} onChange={HandleInputName} placeholder='이름 ex)김컴공' minLength="3" maxLength="4" required />
-                        <input type="tel" name="phoneNum" className="phoneNum" value={inputPhone} onChange={HandleInputPhone} placeholder='전화번호 ex)01012345078' minLength="8" maxLength="11" required />
+                        <input type="tel" name="phoneNum" className="phoneNum" value={inputPhone} onChange={HandleInputPhone} placeholder='전화번호 ex)12345078' minLength="8" maxLength="8" required />
                         <PIC />
-                        <input type="submit" className="logbtn" onClick={onClickLogin} value="로그인"></input>
+                        <input type="button" className="logbtn" onClick={onClickLogin} value="로그인"></input>
                     </form>
                     <Modal.Footer>
                         <Button className="xbtn" onClick={onHide}><BsXLg /></Button>
