@@ -1,14 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import SignButton from './layouts/SignButton';
+import ReservButton from './layouts/ReservButton';
+import CancelButtzon from './layouts/CancelButton';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        프로젝트 생성 후 수정 확인
-      </header>
+    <div>
+      <SignButton />
+      <ReservButton />
+      <CancelButtzon />
     </div>
   );
-}
+};
 
 export default App;
