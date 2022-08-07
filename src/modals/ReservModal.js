@@ -27,7 +27,7 @@ const SignUpModal = ({ show, onHide }) => {
         pass: inputPass
     };
 
-    const onClickLogin = () => {
+    const onClickReserv = () => {
         axios.post("http://13.125.255.247:5000/login", body)
             .then((res) => console.log(res));
     };
@@ -48,7 +48,7 @@ const SignUpModal = ({ show, onHide }) => {
                         <input type="text" className="pass" value={inputPass} onChange={HandleInputPass} placeholder='비밀번호 4자리' minLength="4" maxLength="4" required />
                         <input type="text" className="num2" value={inputNum2} onChange={HandleInputNum2} placeholder='학번 ex)22121234' minLength="8" maxLength="8" required />
                         <p className='hint'><b>사물함 예약 변경하기 위해서<br /> 비밀번호가 꼭 필요하니<br />기억할 수 있는 번호로<br /> 설정해 주세요</b></p>
-                        <input type="button" className="resbtn" value="예약"></input>
+                        <input type="button" className="resbtn" onClick={onClickReserv} value="예약"></input>
                     </form>
                     <Modal.Footer>
                         <Button className="xbtn" onClick={onHide}><BsXLg /></Button>
