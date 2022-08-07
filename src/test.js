@@ -4,7 +4,7 @@ function test() {
 
     return (
         <div>
-            <CancelButton />
+            로그인 성공
         </div>
     );
 };
