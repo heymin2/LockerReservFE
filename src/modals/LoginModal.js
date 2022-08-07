@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import PIC from '../PIC';
-import Login from '../scss/Login.scss';
+import '../scss/Login.scss';
 import { BsXLg } from 'react-icons/bs';
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const LoginModal = ({ show, onHide }) => {

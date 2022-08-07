@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { BsXLg } from "react-icons/bs";
-import Reserv from '../scss/Reserv.scss';
+import '../scss/Reserv.scss';
 import axios from 'axios';
 
 const SignUpModal = ({ show, onHide }) => {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { BsXLg } from "react-icons/bs";
-import Cancel from '../scss/Cancel.scss';
+import '../scss/Cancel.scss';
 import axios from 'axios';
 
 const CancelModal = ({ show, onHide }) => {
