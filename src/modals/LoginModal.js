@@ -4,11 +4,14 @@ import PIC from '../PIC';
 import Login from '../scss/Login.scss';
 import { BsXLg } from "react-icons/bs";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 const LoginModal = ({ show, onHide }) => {
     const [inputNum, setInputNum] = useState('')
     const [inputName, setInputName] = useState('')
     const [inputPhone, setInputPhone] = useState('')
+    const navigate = useNavigate();
 
     const HandleInputNum = (e) => {
         const regex = /^[0-9]{0,13}$/;
@@ -17,7 +20,6 @@ const LoginModal = ({ show, onHide }) => {
         }
     }
     const HandleInputName = (e) => {
-        const regex = /^[ㄱ-ㅎ|가-힣]{0,4}$/; // 여기 안됨
         setInputName(e.target.value)
     }
 
@@ -36,7 +38,32 @@ const LoginModal = ({ show, onHide }) => {
 
     const onClickLogin = () => {
         axios.post("http://13.125.255.247:5000/login", body)
-            .then((res) => console.log(res));
+            .then((res) => {
+                console.log(res);
+                if (inputNum === '') {
+                    alert("학번을 입력하세요")
+                }
+                else if (inputName === '') {
+                    alert("이름을 입력하세요")
+                }
+                else if (inputPhone === '') {
+                    alert("번호를 입력하세요")
+                }
+                else if (res.data === 'A') {
+                    alert("잘못 입력하셨습니다.")
+                    navigate('/');
+                }
+                else if (res.data === 'D') {
+                    alert("비밀번호 3회 오류난 회원입니다. 문의해 주세요.")
+                    navigate('/');
+                }
+                else if (res.data === 'B') {
+                    navigate('/test');
+                }
+                else if (res.data === 'C') {
+                    navigate('/test');
+                }
+            });
     };
 
     return (
@@ -55,7 +82,7 @@ const LoginModal = ({ show, onHide }) => {
                         <input type="text" name="Name" className="name" value={inputName} onChange={HandleInputName} placeholder='이름 ex)김컴공' minLength="3" maxLength="4" required />
                         <input type="tel" name="phoneNum" className="phoneNum" value={inputPhone} onChange={HandleInputPhone} placeholder='전화번호 ex)12345078' minLength="8" maxLength="8" required />
                         <PIC />
-                        <input type="button" className="logbtn" onClick={onClickLogin} value="로그인"></input>
+                        <input type="submit" className="logbtn" onClick={onClickLogin} value="로그인" />
                     </form>
                     <Modal.Footer>
                         <Button className="xbtn" onClick={onHide}><BsXLg /></Button>
