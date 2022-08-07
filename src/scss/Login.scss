@@ -29,6 +29,8 @@ $main: #0D3F7A;
     position: absolute;
     background: #E0E9FF;
     border: 1px solid #D8D8D8;
+
+
 }
 
 .name {
@@ -80,7 +82,14 @@ $main: #0D3F7A;
     font-weight: 400;
     font-size: 30px;
     line-height: 36px;
+    transition-duration: 0.4s;
     color: white;
+}
+
+.logbtn:hover {
+    background-color: white;
+    color: #0D3F7A;
+    border: 2px solid #0D3F7A;
 }
 
 textarea {
@@ -102,7 +111,7 @@ textarea {
     padding: 40px;
     text-align: center;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    box-shadow: 0 5px 5px 0 rgba(34, 36, 38, 0.15);
 }
 
 .logmodal {
