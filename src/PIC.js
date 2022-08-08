@@ -5,7 +5,7 @@ function PIC() {
     }
     return (
         <div className="PIC">
-            <span style={{ color: 'blue' }}>* 아래 약관을 읽은 후 이용가능합니다.</span>
+            <span style={{ color: 'blue' }}>* 아래 약관을 읽은 후 이용 가능</span>
             <div className="flex-center">
                 <textarea id="privacy_scroll" style={{ width: '98%', height: '5rem' }}>
                     [영남대학교 컴퓨터공학과 학생회] ('http://localhost:3000/'이하 '영남대학교 컴퓨터공학과 사물함')은(는) 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
