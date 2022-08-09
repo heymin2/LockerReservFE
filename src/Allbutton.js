@@ -1,6 +1,6 @@
-import SignButton from './layouts/SignButton';
-import ReservButton from './layouts/ReservButton';
-import CancelButtzon from './layouts/CancelButton';
+import SignButton from './button/SignButton';
+import ReservButton from './button/ReservButton';
+import CancelButtzon from './button/CancelButton';
 import Main from './Main';
 import Test from './test';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
