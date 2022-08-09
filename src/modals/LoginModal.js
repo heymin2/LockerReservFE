@@ -86,7 +86,7 @@ const LoginModal = ({ show, onHide }) => {
           confirmButtonColor: '#0D3F7A',
           confirmButtonText: '확인',
         });
-        document.location.replace('/');
+        document.location.replace('/Right');
       } else if (res.data === 'TTLover') {
         Swal.fire({
           title: 'Error',
@@ -95,11 +95,11 @@ const LoginModal = ({ show, onHide }) => {
           confirmButtonColor: '#0D3F7A',
           confirmButtonText: '확인',
         });
-        document.location.replace('/');
+        document.location.replace('/Right');
       } else if (res.data === 'Ruser') {
-        document.location.replace('/test');
+        document.location.replace('/In');
       } else if (res.data === 'nonRuser') {
-        document.location.replace('/test');
+        document.location.replace('/In');
       }
     });
   };

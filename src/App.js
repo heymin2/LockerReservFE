@@ -1,21 +1,21 @@
-import SignButton from './layouts/SignButton';
-import ReservButton from './layouts/ReservButton';
-import CancelButtzon from './layouts/CancelButton';
-import Main from './Main';
-import Test from './test';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/test" element={<Test />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
-};
+const Mcenter = lazy(() => import('./mainpage/Mcenter'));
+const Header = lazy(() => import('./mainpage/Header'));
+const Left = lazy(() => import('./mainpage/Left'));
+const Right = lazy(() => import('./mainpage/Right'));
 
+const App = () => (
+  <div className="App">
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+        <Mcenter />
+        <Right />
+        <Left />
+      </Suspense>
+    </BrowserRouter>
+  </div>
+);
 export default App;
