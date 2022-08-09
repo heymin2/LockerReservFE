@@ -22,14 +22,50 @@ const SignUpModal = ({ show, onHide }) => {
         }
     }
 
-    let body = {
+    let body2 = {
         studentID: inputNum2,
-        pass: inputPass
+        password: inputPass
     };
 
     const onClickReserv = () => {
-        axios.post("http://13.125.255.247:5000/login", body)
-            .then((res) => console.log(res));
+        axios.post('http://13.125.255.247:5000/login', body2)
+            .then((res) => {
+                console.log(res);
+                if (inputNum2 === '') {
+                    Swal.fire({
+                        title: '미입력',
+                        text: '학번을 입력하세요',
+                        icon: 'warning',
+                        confirmButtonColor: '#0D3F7A',
+                        confirmButtonText: '확인',
+                    });
+                } else if (inputPass === '') {
+                    Swal.fire({
+                        title: '미입력',
+                        text: '비밀번호를 입력하세요',
+                        icon: 'warning',
+                        confirmButtonColor: '#0D3F7A',
+                        confirmButtonText: '확인',
+                    });
+                } else if (res.data === 'duplicatedUser') {
+                    Swal.fire({
+                        title: 'Error',
+                        text: '잘못 입력하셨습니다',
+                        icon: 'error',
+                        confirmButtonColor: '#0D3F7A',
+                        confirmButtonText: '확인',
+                    });
+                } else if (res.data === 'TTLover') {
+                    Swal.fire({
+                        title: 'Error',
+                        text: '비밀번호 3회 오류난 회원입니다. 문의해 주세요.',
+                        icon: 'error',
+                        confirmButtonColor: '#0D3F7A',
+                        confirmButtonText: '확인',
+                    });
+                    // 예약 완료됐다는 데이터 받으면 빨간색 처리 - 데이터 뭘로 줌?
+                }
+            });
     };
 
     return (
