@@ -8,7 +8,7 @@ const In = () => {
                 <div className='txt'>
                     사물함<br /> 1층 A 3행 5줄
                 </div>
-                <button className='logout'>로그아웃</button>
+                <button className='logout' >로그아웃</button>
             </div>
         </aside>
     )

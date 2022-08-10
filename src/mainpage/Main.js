@@ -9,8 +9,7 @@ const Main = () => {
       <aside className='asideleft'>
         <img className='map' src={'1층A.png'}></img>
         <button className='locbtn' onClick={() => alert('로그인하세요')} >1층 A</button>
-        <button className='locbtn' onClick={() => alert('로그인하세요')}>1층 B</button>
-        <button className='locbtn' onClick={() => alert('로그인하세요')}>1층 C</button>
+        <button className='locbtn' onClick={() => alert('로그인하세요')}>1층 B</button><br />
         <button className='locbtn' onClick={() => alert('로그인하세요')}>2층 A</button>
         <button className='locbtn' onClick={() => alert('로그인하세요')}>2층 B</button>
         <button className='locbtn' onClick={() => alert('로그인하세요')}>2층 C</button>
