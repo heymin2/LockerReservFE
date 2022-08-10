@@ -4,7 +4,7 @@ import ReservModal from '../modals/ReservModal';
 import Left from '../mainpage/Left';
 import In from '../mainpage/In';
 
-const C1 = ({ rservNum }) => {
+const C1 = ({ }) => {
     const [reservModal, reservModalOn] = useState(false);
     return (
         <>
