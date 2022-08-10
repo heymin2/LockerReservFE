@@ -1,7 +1,8 @@
 .login {
     background-color: #0D3F7A;
     color: white;
-    font-size: x-large;
+    font-size: 140%;
+    font-weight: bold;
     padding: 5% 20% 5% 20%;
     margin-left: 20%;
     margin-top: 11%;
@@ -31,7 +32,7 @@
 
 .txt {
     color: white;
-    font-size: x-large;
+    font-size: 140%;
     line-height: 40px;
     letter-spacing: 1px;
 
@@ -43,7 +44,7 @@
     border: 0;
     margin: 5% 0 10% 0;
     padding: 5% 30% 5% 30%;
-    font-size: large;
+    font-size: 125%;
     font-weight: bold;
     border-radius: 3px;
 }

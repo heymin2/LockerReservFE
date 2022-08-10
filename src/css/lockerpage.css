@@ -15,11 +15,14 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    padding-left: 2%;
+    overflow: auto;
+    white-space: nowrap;
 
 }
 
 .locker {
-    width: 50px;
-    height: 50px;
-
+    width: 6%;
+    height: 6%;
+    
 }
