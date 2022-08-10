@@ -1,39 +1,43 @@
-
-.login{
+.login {
     background-color: #0D3F7A;
     color: white;
     font-size: x-large;
-    padding:5% 20% 5% 20%;
+    padding: 5% 20% 5% 20%;
     margin-left: 20%;
     margin-top: 11%;
 }
-.asideright{
+
+.asideright {
     width: 20%;
-    top: 100px;
+    top: 108px;
     right: 0px;
     bottom: 0px;
     position: fixed;
-    
+
 }
-.profile{
+
+.profile {
     width: 90px;
     height: 90px;
     margin-top: 10%;
 }
-.profilebox{
+
+.profilebox {
     background-color: #0D3F7A;
     margin: 11% 10% 0 10%;
     text-align: center;
     white-space: pre-line;
 }
-.txt{
+
+.txt {
     color: white;
     font-size: x-large;
     line-height: 40px;
     letter-spacing: 1px;
 
 }
-.logout{
+
+.logout {
     background-color: white;
     color: #0D3F7A;
     border: 0;

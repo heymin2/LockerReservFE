@@ -1,18 +1,19 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-const Main = lazy(() => import('./mainpage/Main'));
+const Mcenter = lazy(() => import('./mainpage/Mcenter'));
 const Header = lazy(() => import('./mainpage/Header'));
 const Left = lazy(() => import('./mainpage/Left'));
 const Right = lazy(() => import('./mainpage/Right'));
+const In = lazy(() => import('./mainpage/In'));
 
 const App = () => (
   <div className="App">
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
         <Header />
-        <Main />
-        <Right />
+        <Mcenter />
+        <In />
         <Left />
       </Suspense>
     </BrowserRouter>

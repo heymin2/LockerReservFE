@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Main = () => {
   return (
-    <div className='app-center'>
+    <div className="app-center">
       <div className='box'>
         <Link to="/">
           <main>
