@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/lockerpage.css';
-const B2 = () => {
+import ReservModal from '../modals/ReservModal';
+import Left from '../mainpage/Left';
+import In from '../mainpage/In';
+
+const B2 = ({ rservNum }) => {
+    const [reservModal, reservModalOn] = useState(false);
     return (
-        <div className='app-center'>
-            <div className='box'>
-                <img className="locker" src={"빨간사물함.png"} />
-                <img className="locker" src={"파란사물함.png"} />
-                <img className="locker" src={"회색사물함.png"} />
-                <img className="locker" src={"회색사물함.png"} />
+        <>
+            <Left />
+            <div className='app-center'>
+                <div className='box'>
+                    <ReservModal
+                        show={reservModal}
+                        onHide={() => reservModalOn(false)}
+                    />
+                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
+                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
+                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
+                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
+                </div >
             </div>
-        </div>
-    )
+            <In />
+        </>
+    );
 }
 
 export default B2;
