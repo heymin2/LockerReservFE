@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../css/lockerpage.css';
 import ReservModal from '../modals/ReservModal';
-import Left from '../mainpage/Left';
 import In from '../mainpage/In';
 import { Link } from 'react-router-dom';
 

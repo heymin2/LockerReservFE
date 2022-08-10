@@ -1,6 +1,5 @@
 import '../css/lockerpage.css';
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
 import '../css/Left.css';
 import Right from './Right';
 const Main = () => {
