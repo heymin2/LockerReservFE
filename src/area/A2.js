@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const A2 = ({ rservNum }) => {
   const [reservModal, reservModalOn] = useState(false);
-  const [mapname, setmapname] = useState('');
+  const [mapname, setmapname] = useState('2층A.png');
   const onclickA1 = () => {
     setmapname("1층A.png");
   }
@@ -18,7 +18,7 @@ const A2 = ({ rservNum }) => {
     setmapname("A1.jpg");
   }
   const onclickA2 = () => {
-    setmapname("A1.jpg");
+    setmapname("2층A.png");
   }
   const onclickB2 = () => {
     setmapname("A1.jpg");
