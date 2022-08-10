@@ -3,10 +3,12 @@ import { Modal, Button } from 'react-bootstrap';
 import { BsXLg } from "react-icons/bs";
 import '../scss/Reserv.scss';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const SignUpModal = ({ show, onHide }) => {
     const [inputPass, setInputPass] = useState('')
     const [inputNum2, setInputNum2] = useState('')
+
 
     const HandleInputPass = (e) => {
         const regex = /^[0-9]{0,13}$/;
