@@ -1,7 +1,7 @@
 .word3 {
     position: absolute;
     font-family: 'Inter';
-    left: 80px;
+    left: 78px;
     font-size: 30px;
     color: #000000;
 }
@@ -34,6 +34,12 @@
     color: white;
 }
 
+.canbtn:hover {
+    background-color: white;
+    color: #0D3F7A;
+    border: 2px solid #0D3F7A;
+}
+
 .modalBody3 {
     position: absolute;
     width: 300px;
@@ -44,4 +50,22 @@
     text-align: center;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+}
+
+.background {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.xbtn {
+    background: none;
+    border: none;
+    padding-left: 100%;
 }

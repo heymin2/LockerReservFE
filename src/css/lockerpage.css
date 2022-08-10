@@ -1,0 +1,27 @@
+.app-center {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    width: 55%;
+    top: 108px;
+    left: 25%;
+    bottom: 0px;
+    position: fixed;
+}
+
+.box {
+    margin: 4% 2% 0 2%;
+    height: 90%;
+    background-color: #EAEAEA;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-left: 2%;
+    overflow: auto;
+    white-space: nowrap;
+
+}
+
+.locker {
+    width: 50px;
+    height: 50px;
+}

@@ -1,17 +1,19 @@
-import SignButton from './layouts/SignButton';
-import ReservButton from './layouts/ReservButton';
-import CancelButtzon from './layouts/CancelButton';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+const Mcenter = lazy(() => import('./mainpage/Mcenter'));
+const Header = lazy(() => import('./mainpage/Header'));
+const Left = lazy(() => import('./mainpage/Left'));
 
 
-function App() {
-
-  return (
-    <div>
-      <SignButton />
-      <ReservButton />
-      <CancelButtzon />
-    </div>
-  );
-};
-
+const App = () => (
+  <div>
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+        <Mcenter />
+      </Suspense>
+    </BrowserRouter>
+  </div>
+);
 export default App;
