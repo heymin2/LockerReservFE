@@ -1,10 +1,11 @@
-header{
+header {
     background-color: #0D3F7A;
     display: flex;
     justify-content: center;
     padding: 10px 0 0 0;
-
+    margin: 0px;
 }
+
 nav {
     margin: 40px 0 0 0;
     width: 100%;
@@ -15,5 +16,4 @@ nav {
     color: white;
     font-size: x-large;
     background-color: #d2d2d2;
-  
-  }
+}

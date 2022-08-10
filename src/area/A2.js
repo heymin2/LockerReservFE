@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../css/lockerpage.css';
 import ReservModal from '../modals/ReservModal';
-import Left from '../mainpage/Left';
 import In from '../mainpage/In';
 import { Link } from 'react-router-dom';
 
@@ -12,19 +11,16 @@ const A2 = ({ }) => {
     setmapname("1층A.png");
   }
   const onclickB1 = () => {
-    setmapname("B1.jpg");
-  }
-  const onclickC1 = () => {
-    setmapname("A1.jpg");
+    setmapname("1층B.png");
   }
   const onclickA2 = () => {
     setmapname("2층A.png");
   }
   const onclickB2 = () => {
-    setmapname("A1.jpg");
+    setmapname("2층B.png");
   }
   const onclickC2 = () => {
-    setmapname("A1.jpg");
+    setmapname("2층C.png");
   }
   return (
     <>
@@ -35,12 +31,9 @@ const A2 = ({ }) => {
         </Link>
         <Link to="/B1">
           <button className='locbtn' onClick={onclickB1}>1층 B</button>
-        </Link>
-        <Link to="/C1">
-          <button className='locbtn' onClick={onclickC1}>1층 C</button>
-        </Link>
+        </Link><br />
         <Link to="/A2">
-          <button className='locbtn' onClick={onclickA2}>2층 A</button>
+          <button className='locbtn' style={{ backgroundColor: '#2178DF' }} onClick={onclickA2}>2층 A</button>
         </Link>
         <Link to="/B2">
           <button className='locbtn' onClick={onclickB2}>2층 B</button>
