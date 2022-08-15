@@ -5,10 +5,9 @@ import '../scss/Reserv.scss';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
-const SignUpModal = ({ show, onHide }) => {
+const ReservModal = ({ show, onHide }) => {
     const [inputPass, setInputPass] = useState('')
     const [inputNum2, setInputNum2] = useState('')
-
 
     const HandleInputPass = (e) => {
         const regex = /^[0-9]{0,13}$/;
@@ -82,7 +81,7 @@ const SignUpModal = ({ show, onHide }) => {
                     <div className='rect2' />
                     <p className="word2">사물함 예약</p>
                     <form method="post">
-                        <p className="res">선택한 사물함</p>
+                        <p className="res">선택한 사물함<br /></p>
                         <input type="text" className="pass" value={inputPass} onChange={HandleInputPass} placeholder='비밀번호 4자리' minLength="4" maxLength="4" required />
                         <input type="text" className="num2" value={inputNum2} onChange={HandleInputNum2} placeholder='학번 ex)22121234' minLength="8" maxLength="8" required />
                         <p className='hint'><b>사물함 예약 변경하기 위해서<br /> 비밀번호가 꼭 필요하니<br />기억할 수 있는 번호로<br /> 설정해 주세요</b></p>
@@ -93,8 +92,8 @@ const SignUpModal = ({ show, onHide }) => {
                     </Modal.Footer>
                 </div>
             </div>
-        </Modal>
+        </Modal >
     )
 }
 
-export default SignUpModal
+export default ReservModal;
