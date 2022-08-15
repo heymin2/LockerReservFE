@@ -4,7 +4,7 @@ import ReservModal from '../modals/ReservModal';
 import In from '../mainpage/In';
 import { Link } from 'react-router-dom';
 
-const B1 = ({ }) => {
+const B1 = () => {
     const [reservModal, reservModalOn] = useState(false);
     const [mapname, setmapname] = useState('1층B.png');
     const onclickA1 = () => {
