@@ -7,6 +7,11 @@ import { Link } from 'react-router-dom';
 const C2 = () => {
     const [reservModal, reservModalOn] = useState(false);
     const [mapname, setmapname] = useState('2층C.png');
+    const [floor, setFloor] = useState('2층');
+    const [part, setPart] = useState('C');
+    const [hang, setHang] = useState('1');
+    const [yeol, setYeol] = useState('')
+
     const onclickA1 = () => {
         setmapname("1층A.png");
     }
@@ -47,11 +52,23 @@ const C2 = () => {
                     <ReservModal
                         show={reservModal}
                         onHide={() => reservModalOn(false)}
+                        floor={floor}
+                        part={part}
+                        hang={hang}
+                        yeol={yeol}
                     />
-                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
-                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
-                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
-                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
+                    <main>
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('1') }} />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('2') }} /><br />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('2'); setYeol('1') }} />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('2'); setYeol('2') }} /><br />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('3'); setYeol('1') }} />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('3'); setYeol('2') }} /><br />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('4'); setYeol('1') }} />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('4'); setYeol('2') }} /><br />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('5'); setYeol('1') }} />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('5'); setYeol('2') }} /><br />
+                    </main>
                 </div >
             </div>
             <In />

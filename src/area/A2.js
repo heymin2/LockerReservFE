@@ -7,6 +7,11 @@ import { Link } from 'react-router-dom';
 const A2 = () => {
   const [reservModal, reservModalOn] = useState(false);
   const [mapname, setmapname] = useState('2층A.png');
+  const [floor, setFloor] = useState('2층');
+  const [part, setPart] = useState('A');
+  const [hang, setHang] = useState('1');
+  const [yeol, setYeol] = useState('')
+
   const onclickA1 = () => {
     setmapname("1층A.png");
   }
@@ -47,11 +52,17 @@ const A2 = () => {
           <ReservModal
             show={reservModal}
             onHide={() => reservModalOn(false)}
+            floor={floor}
+            part={part}
+            hang={hang}
+            yeol={yeol}
           />
-          <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
-          <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
-          <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
-          <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
+          <main>
+            <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('1') }} />
+            <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('2') }} />
+            <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('3') }} />
+            <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('4') }} />
+          </main>
         </div >
       </div>
       <In />
