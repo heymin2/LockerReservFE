@@ -11,6 +11,7 @@ const B1 = () => {
     const [part, setPart] = useState('B');
     const [hang, setHang] = useState('1');
     const [yeol, setYeol] = useState('')
+    const [fs, setFs] = useState('앞');
 
     const onclickA1 = () => {
         setmapname("1층A.png");
@@ -56,6 +57,7 @@ const B1 = () => {
                         part={part}
                         hang={hang}
                         yeol={yeol}
+                        fs={fs}
                     />
                     <main>
                         <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('1') }} />
