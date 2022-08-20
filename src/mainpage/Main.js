@@ -7,11 +7,11 @@ const Main = () => {
     <>
       <aside className='asideleft'>
         <img className='map' src={'1층A.png'}></img>
-        <button className='locbtn' onClick={() => alert('로그인하세요')} >113호 앞</button>
-        <button className='locbtn' onClick={() => alert('로그인하세요')}>114호 앞</button><br />
-        <button className='locbtn' onClick={() => alert('로그인하세요')}>214호 앞</button>
-        <button className='locbtn' onClick={() => alert('로그인하세요')}>219호 앞</button>
-        <button className='locbtn' onClick={() => alert('로그인하세요')}>219호 옆</button>
+        <button className='locbtn' onClick={() => alert('로그인하세요')} >113호</button>
+        <button className='locbtn' onClick={() => alert('로그인하세요')}>114호</button><br />
+        <button className='locbtn' onClick={() => alert('로그인하세요')}>214호</button>
+        <button className='locbtn' onClick={() => alert('로그인하세요')}>219호</button>
+        <button className='locbtn' onClick={() => alert('로그인하세요')}>219호</button>
       </aside>
       <div className="app-center">
         <div className='box'>
