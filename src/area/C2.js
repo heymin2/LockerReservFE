@@ -32,19 +32,19 @@ const C2 = () => {
             <aside className='asideleft'>
                 <img className='map' src={mapname}></img>
                 <Link to="/A1">
-                    <button className='locbtn' onClick={onclickA1}>1층 A</button>
+                    <button className='locbtn' onClick={onclickA1}>113호 앞</button>
                 </Link>
                 <Link to="/B1">
-                    <button className='locbtn' onClick={onclickB1}>1층 B</button>
+                    <button className='locbtn' onClick={onclickB1}>114호 앞</button>
                 </Link><br />
                 <Link to="/A2">
-                    <button className='locbtn' onClick={onclickA2}>2층 A</button>
+                    <button className='locbtn' onClick={onclickA2}>214호 앞</button>
                 </Link>
                 <Link to="/B2">
-                    <button className='locbtn' onClick={onclickB2}>2층 B</button>
+                    <button className='locbtn' onClick={onclickB2}>219호 앞</button>
                 </Link>
                 <Link to="/C2">
-                    <button className='locbtn' style={{ backgroundColor: '#2178DF' }} onClick={onclickC2}>2층 C</button>
+                    <button className='locbtn' style={{ backgroundColor: '#2178DF' }} onClick={onclickC2}>219호 옆</button>
                 </Link>
             </aside>
             <div className='app-center'>
