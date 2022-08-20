@@ -16,8 +16,8 @@ const Mcenter = () => {
       <Route path="/A" element={<A1 />}></Route>
       <Route path="/C" element={<A2 />}></Route>
       <Route path="/B" element={<B1 />}></Route>
-      <Route path="/D" element={<B2 />}></Route>
-      <Route path="/E" element={<C2 />}></Route>
+      <Route path="/D" element={<C2 />}></Route>
+      <Route path="/E" element={<B2 />}></Route>
     </Routes>
   )
 }
