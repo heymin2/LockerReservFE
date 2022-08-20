@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const A1 = () => {
   const [reservModal, reservModalOn] = useState(false);
   const [mapname, setmapname] = useState('1층A.png');
-  const [floor, setFloor] = useState('1층');
+  const [floor, setFloor] = useState('1');
   const [part, setPart] = useState('A');
   const [hang, setHang] = useState('1');
   const [yeol, setYeol] = useState('')

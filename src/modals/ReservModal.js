@@ -32,7 +32,7 @@ const ReservModal = ({ show, onHide, floor, part, hang, yeol }) => {
     };
 
     const onClickReserv = () => {
-        axios.post('http://13.125.255.247:5000/login', body2)
+        axios.post('http://13.125.255.247:5000/reservation/locker', body2)
             .then((res) => {
                 console.log(res);
                 if (inputNum2 === '') {
@@ -67,7 +67,7 @@ const ReservModal = ({ show, onHide, floor, part, hang, yeol }) => {
                         confirmButtonColor: '#0D3F7A',
                         confirmButtonText: '확인',
                     });
-                } else if (res.data === 'userAr') {
+                } else if (res.data === 'userAR') {
                     Swal.fire({
                         title: 'Error',
                         text: '이미 사물함을 예약하셨습니다. 기존 사물함을 취소하고 예약해 주세요',
@@ -91,7 +91,7 @@ const ReservModal = ({ show, onHide, floor, part, hang, yeol }) => {
                         icon: 'success',
                         confirmButtonColor: '#0D3F7A',
                         confirmButtonText: '확인',
-                    });
+                    }, document.location.replace(`/${part}${floor}`));
                 }
             });
     };
@@ -108,7 +108,7 @@ const ReservModal = ({ show, onHide, floor, part, hang, yeol }) => {
                     <div className='rect2' />
                     <p className="word2">사물함 예약</p>
                     <form method="post">
-                        <p className="res"><c style={{ color: 'grey' }}>선택한 사물함</c><br />{floor}{part} {hang}행 {yeol}열</p>
+                        <p className="res"><c style={{ color: 'grey' }}>선택한 사물함</c><br />{floor}층{part} {hang}행 {yeol}열</p>
                         <input type="text" className="pass" value={inputPass} onChange={HandleInputPass} placeholder='비밀번호 4자리' minLength="4" maxLength="4" required />
                         <input type="text" className="num2" value={inputNum2} onChange={HandleInputNum2} placeholder='학번 ex)22121234' minLength="8" maxLength="8" required />
                         <p className='hint'><b>사물함 예약 변경하기 위해서<br /> 비밀번호가 꼭 필요하니<br />기억할 수 있는 번호로<br /> 설정해 주세요</b></p>
