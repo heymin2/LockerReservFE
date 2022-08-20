@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const A2 = () => {
   const [reservModal, reservModalOn] = useState(false);
   const [mapname, setmapname] = useState('2층A.png');
-  const [floor, setFloor] = useState('2');
+  const [floor, setFloor] = useState('214');
   const [part, setPart] = useState('A');
   const [hang, setHang] = useState('1');
   const [yeol, setYeol] = useState('')
@@ -31,19 +31,19 @@ const A2 = () => {
     <>
       <aside className='asideleft'>
         <img className='map' src={mapname}></img>
-        <Link to="/A1">
+        <Link to="/A">
           <button className='locbtn' onClick={onclickA1}>113호 앞</button>
         </Link>
-        <Link to="/B1">
+        <Link to="/B">
           <button className='locbtn' onClick={onclickB1}>114호 앞</button>
         </Link><br />
-        <Link to="/A2">
+        <Link to="/C">
           <button className='locbtn' style={{ backgroundColor: '#2178DF' }} onClick={onclickA2}>214호 앞</button>
         </Link>
-        <Link to="/B2">
+        <Link to="/D">
           <button className='locbtn' onClick={onclickB2}>219호 앞</button>
         </Link>
-        <Link to="/C2">
+        <Link to="/E">
           <button className='locbtn' onClick={onclickC2}>219호 옆</button>
         </Link>
       </aside>
