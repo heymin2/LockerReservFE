@@ -6,27 +6,26 @@ import { Link } from 'react-router-dom';
 
 const A1 = () => {
   const [reservModal, reservModalOn] = useState(false);
-  const [mapname, setmapname] = useState('1층A.png');
+  const [mapname, setmapname] = useState('113.png');
   const [floor, setFloor] = useState('113');
   const [part, setPart] = useState('A');
   const [hang, setHang] = useState('1');
   const [yeol, setYeol] = useState('')
-  const [fs, setFs] = useState('앞');
 
   const onclickA1 = () => {
-    setmapname("1층A.png");
+    setmapname("113.png");
   }
   const onclickB1 = () => {
-    setmapname("1층B.png");
+    setmapname("114.png");
   }
   const onclickA2 = () => {
-    setmapname("2층A.png");
+    setmapname("214.png");
   }
   const onclickB2 = () => {
-    setmapname("2층B.png");
+    setmapname("219.png");
   }
   const onclickC2 = () => {
-    setmapname("2층C.png");
+    setmapname("220.png");
   }
   return (
     <>
@@ -45,7 +44,7 @@ const A1 = () => {
           <button className='locbtn' onClick={onclickB2}>219호</button>
         </Link>
         <Link to="/E">
-          <button className='locbtn' onClick={onclickC2}>219호</button>
+          <button className='locbtn' onClick={onclickC2}>220호</button>
         </Link>
       </aside>
       <div className='app-center'>
@@ -57,7 +56,6 @@ const A1 = () => {
             part={part}
             hang={hang}
             yeol={yeol}
-            fs={fs}
           />
           <main>
             <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('1') }} />
