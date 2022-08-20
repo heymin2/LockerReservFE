@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 const B2 = () => {
     const [reservModal, reservModalOn] = useState(false);
     const [mapname, setmapname] = useState('220.png');
-    const [floor, setFloor] = useState('219');
-    const [part, setPart] = useState('B');
+    const [floor, setFloor] = useState('220');
+    const [part, setPart] = useState('E');
     const [hang, setHang] = useState('1');
     const [yeol, setYeol] = useState('')
 

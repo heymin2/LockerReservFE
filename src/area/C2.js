@@ -8,7 +8,7 @@ const C2 = () => {
     const [reservModal, reservModalOn] = useState(false);
     const [mapname, setmapname] = useState('219.png');
     const [floor, setFloor] = useState('219');
-    const [part, setPart] = useState('C');
+    const [part, setPart] = useState('D');
     const [hang, setHang] = useState('1');
     const [yeol, setYeol] = useState('')
 
