@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 const B1 = () => {
     const [reservModal, reservModalOn] = useState(false);
     const [mapname, setmapname] = useState('114.png');
-    const [floor, setFloor] = useState('114');
-    const [part, setPart] = useState('B');
     const [hang, setHang] = useState('1');
     const [yeol, setYeol] = useState('')
 
@@ -52,13 +50,13 @@ const B1 = () => {
                     <ReservModal
                         show={reservModal}
                         onHide={() => reservModalOn(false)}
-                        floor={floor}
-                        part={part}
+                        floor={'114'}
+                        part={'B'}
                         hang={hang}
                         yeol={yeol}
                     />
                     <main>
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('1') }} alt="profile" />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('1'); setYeol('1') }} alt="profile" />
                         <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('2') }} alt="profile" />
                         <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('3') }} alt="profile" />
                         <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('4') }} alt="profile" />
