@@ -17,3 +17,7 @@ nav {
     font-size: x-large;
     background-color: #d2d2d2;
 }
+
+body {
+    margin: 0;
+}
