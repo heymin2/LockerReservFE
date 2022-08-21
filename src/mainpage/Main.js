@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <>
       <aside className='asideleft'>
-        <img className='map' src={'113.png'}></img>
+        <img className='map' src={'113.png'} alt="profile"></img>
         <button className='locbtn' onClick={() => alert('로그인하세요')} >113호</button>
         <button className='locbtn' onClick={() => alert('로그인하세요')}>114호</button><br />
         <button className='locbtn' onClick={() => alert('로그인하세요')}>214호</button>
@@ -17,36 +17,36 @@ const Main = () => {
         <div className='box'>
           <Link to="/">
             <main>
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} /><br />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} /><br />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" /><br />
+              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" /><br />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
             </main>
           </Link>
         </div>

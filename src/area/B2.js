@@ -30,7 +30,7 @@ const B2 = () => {
     return (
         <>
             <aside className='asideleft'>
-                <img className='map' src={mapname}></img>
+                <img className='map' src={mapname} alt="profile"></img>
                 <Link to="/A">
                     <button className='locbtn' onClick={onclickA1}>113호</button>
                 </Link>
@@ -58,10 +58,10 @@ const B2 = () => {
                         yeol={yeol}
                     />
                     <main>
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('1') }} />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('2') }} />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('3') }} />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('4') }} />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('1') }} alt="profile" />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('2') }} alt="profile" />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('3') }} alt="profile" />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('4') }} alt="profile" />
                     </main>
                 </div >
             </div>

@@ -6,7 +6,7 @@ const In = () => {
     return (
         <aside className="asideright">
             <div className='profilebox'>
-                <img src='프로필사진.png' className='profile'></img>
+                <img src='프로필사진.png' className='profile' alt="profile"></img>
                 <div className='txt'>
                     사물함<br /> 예약하지 않음
                 </div>
