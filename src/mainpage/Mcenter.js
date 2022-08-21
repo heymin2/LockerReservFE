@@ -13,13 +13,13 @@ const Mcenter = () => {
   return (
     <Routes>
       <Route path="/" element={<Main />}></Route>
-      <Route path="/A1" element={<A1 />}></Route>
-      <Route path="/A2" element={<A2 />}></Route>
-      <Route path="/B1" element={<B1 />}></Route>
-      <Route path="/B2" element={<B2 />}></Route>
-      <Route path="/C2" element={<C2 />}></Route>
+      <Route path="/A" element={<A1 />}></Route>
+      <Route path="/C" element={<A2 />}></Route>
+      <Route path="/B" element={<B1 />}></Route>
+      <Route path="/D" element={<C2 />}></Route>
+      <Route path="/E" element={<B2 />}></Route>
     </Routes>
-  )
+  );
 }
 
 export default Mcenter;

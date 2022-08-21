@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import PIC from '../PIC';
 import '../scss/Login.scss';
@@ -45,7 +45,6 @@ const LoginModal = ({ show, onHide }) => {
 
   const onClickLogin = () => {
     axios.post('http://13.125.255.247:5000/login', body).then((res) => {
-      console.log(res);
       if (inputNum === '') {
         Swal.fire({
           title: '미입력',

@@ -4,42 +4,47 @@ import ReservModal from '../modals/ReservModal';
 import In from '../mainpage/In';
 import { Link } from 'react-router-dom';
 
-const B2 = ({ }) => {
+const B2 = () => {
     const [reservModal, reservModalOn] = useState(false);
-    const [mapname, setmapname] = useState('2층B.png');
+    const [mapname, setmapname] = useState('220.png');
+    const [floor, setFloor] = useState('220');
+    const [part, setPart] = useState('E');
+    const [hang, setHang] = useState('1');
+    const [yeol, setYeol] = useState('')
+
     const onclickA1 = () => {
-        setmapname("1층A.png");
+        setmapname("113.png");
     }
     const onclickB1 = () => {
-        setmapname("1층B.png");
+        setmapname("114.png");
     }
     const onclickA2 = () => {
-        setmapname("2층A.png");
+        setmapname("214.png");
     }
     const onclickB2 = () => {
-        setmapname("2층B.png");
+        setmapname("219.png");
     }
     const onclickC2 = () => {
-        setmapname("2층C.png");
+        setmapname("220.png");
     }
     return (
         <>
             <aside className='asideleft'>
-                <img className='map' src={mapname}></img>
-                <Link to="/A1">
-                    <button className='locbtn' onClick={onclickA1}>1층 A</button>
+                <img className='map' src={mapname} alt="profile"></img>
+                <Link to="/A">
+                    <button className='locbtn' onClick={onclickA1}>113호</button>
                 </Link>
-                <Link to="/B1">
-                    <button className='locbtn' onClick={onclickB1}>1층 B</button>
+                <Link to="/B">
+                    <button className='locbtn' onClick={onclickB1}>114호</button>
                 </Link><br />
-                <Link to="/A2">
-                    <button className='locbtn' onClick={onclickA2}>2층 A</button>
+                <Link to="/C">
+                    <button className='locbtn' onClick={onclickA2}>214호</button>
                 </Link>
-                <Link to="/B2">
-                    <button className='locbtn' style={{ backgroundColor: '#2178DF' }} onClick={onclickB2}>2층 B</button>
+                <Link to="/D">
+                    <button className='locbtn' onClick={onclickB2}>219호</button>
                 </Link>
-                <Link to="/C2">
-                    <button className='locbtn' onClick={onclickC2}>2층 C</button>
+                <Link to="/E">
+                    <button className='locbtn' style={{ backgroundColor: '#2178DF' }} onClick={onclickC2}>220호</button>
                 </Link>
             </aside>
             <div className='app-center'>
@@ -47,11 +52,17 @@ const B2 = ({ }) => {
                     <ReservModal
                         show={reservModal}
                         onHide={() => reservModalOn(false)}
+                        floor={floor}
+                        part={part}
+                        hang={hang}
+                        yeol={yeol}
                     />
-                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
-                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
-                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
-                    <img className="locker" src={"파란사물함.png"} onClick={() => reservModalOn(true)} />
+                    <main>
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('1') }} alt="profile" />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('2') }} alt="profile" />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('3') }} alt="profile" />
+                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('4') }} alt="profile" />
+                    </main>
                 </div >
             </div>
             <In />
