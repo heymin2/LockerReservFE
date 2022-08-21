@@ -13,8 +13,7 @@ const Right = () => {
       />
       <Button className='login' onClick={() => setSignUpModalOn(true)}>로그인</Button>
     </aside>
-  )
-
+  );
 }
 
 export default Right;

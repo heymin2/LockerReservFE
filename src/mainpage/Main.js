@@ -53,7 +53,7 @@ const Main = () => {
       </div>
       <Right />
     </>
-  )
+  );
 }
 
 export default Main;

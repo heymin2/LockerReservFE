@@ -19,7 +19,7 @@ const Mcenter = () => {
       <Route path="/D" element={<C2 />}></Route>
       <Route path="/E" element={<B2 />}></Route>
     </Routes>
-  )
+  );
 }
 
 export default Mcenter;

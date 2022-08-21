@@ -13,8 +13,7 @@ const In = () => {
                 <Link to="/"><button className='logout' >로그아웃</button></Link>
             </div>
         </aside>
-    )
-
+    );
 }
 
 export default In;
