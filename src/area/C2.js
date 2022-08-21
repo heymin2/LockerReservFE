@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 const C2 = () => {
     const [reservModal, reservModalOn] = useState(false);
     const [mapname, setmapname] = useState('219.png');
-    const [floor, setFloor] = useState('219');
-    const [part, setPart] = useState('D');
     const [hang, setHang] = useState('1');
     const [yeol, setYeol] = useState('')
 
@@ -52,8 +50,8 @@ const C2 = () => {
                     <ReservModal
                         show={reservModal}
                         onHide={() => reservModalOn(false)}
-                        floor={floor}
-                        part={part}
+                        floor={'219'}
+                        part={'D'}
                         hang={hang}
                         yeol={yeol}
                     />
