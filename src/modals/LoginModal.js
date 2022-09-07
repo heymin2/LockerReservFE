@@ -97,10 +97,10 @@ const LoginModal = ({ show, onHide }) => {
         document.location.replace('/Right');
       } else if (res.data === 'Ruser') {
         // localStorage.setItem('isLogin', true);
-        document.location.replace('/A1');
+        document.location.replace('/A');
       } else if (res.data === 'nonRuser') {
         // localStorage.setItem('isLogin', true);
-        document.location.replace('/A1');
+        document.location.replace('/A');
       }
     });
   };

@@ -5,7 +5,7 @@ import '../scss/Reserv.scss';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
-const ReservModal = ({ show, onHide, floor, part, hang, yeol, fs }) => {
+const ReservModal = ({ show, onHide, floor, part, hang, yeol }) => {
     const [inputPass, setInputPass] = useState('')
     const [inputNum2, setInputNum2] = useState('')
 
