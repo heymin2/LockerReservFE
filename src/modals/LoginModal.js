@@ -34,13 +34,13 @@ const LoginModal = ({ show, onHide }) => {
     if (regex.test(e.target.value)) {
       setInputPass3(e.target.value);
     }
-  }
+  };
 
   let body = {
     studentID: inputNum,
     name: inputName,
     phone: inputPhone,
-    password: inputPass3
+    password: inputPass3,
   };
 
   const onClickLogin = () => {
@@ -96,8 +96,10 @@ const LoginModal = ({ show, onHide }) => {
         });
         document.location.replace('/Right');
       } else if (res.data === 'Ruser') {
+        // localStorage.setItem('isLogin', true);
         document.location.replace('/A1');
       } else if (res.data === 'nonRuser') {
+        // localStorage.setItem('isLogin', true);
         document.location.replace('/A1');
       }
     });
@@ -116,15 +118,62 @@ const LoginModal = ({ show, onHide }) => {
           <div className="rect" />
           <p className="word">사물함 로그인</p>
           <form method="post">
-            <input type="text" name="Num" className="num" value={inputNum} onChange={HandleInputNum} placeholder="학번 ex)22121234" minLength="8" maxLength="8" required />
-            <input type="text" name="Name" className="name" value={inputName} onChange={HandleInputName} placeholder="이름 ex)김컴공" minLength="3" maxLength="4" required />
-            <input type="tel" name="phoneNum" className="phoneNum" value={inputPhone} onChange={HandleInputPhone} placeholder="전화번호 ex)12345078" minLength="8" maxLength="8" required />
-            <input type="text" className="pass3" value={inputPass3} onChange={HandleInputPass3} placeholder='비밀번호 4자리' minLength="4" maxLength="4" required />
+            <input
+              type="text"
+              name="Num"
+              className="num"
+              value={inputNum}
+              onChange={HandleInputNum}
+              placeholder="학번 ex)22121234"
+              minLength="8"
+              maxLength="8"
+              required
+            />
+            <input
+              type="text"
+              name="Name"
+              className="name"
+              value={inputName}
+              onChange={HandleInputName}
+              placeholder="이름 ex)김컴공"
+              minLength="3"
+              maxLength="4"
+              required
+            />
+            <input
+              type="tel"
+              name="phoneNum"
+              className="phoneNum"
+              value={inputPhone}
+              onChange={HandleInputPhone}
+              placeholder="전화번호 ex)12345078"
+              minLength="8"
+              maxLength="8"
+              required
+            />
+            <input
+              type="text"
+              className="pass3"
+              value={inputPass3}
+              onChange={HandleInputPass3}
+              placeholder="비밀번호 4자리"
+              minLength="4"
+              maxLength="4"
+              required
+            />
             <PIC />
-            <input type="button" className="logbtn" onClick={onClickLogin} value="로그인" />
+            <input
+              type="button"
+              className="logbtn"
+              onClick={onClickLogin}
+              value="로그인"
+            />
           </form>
           <Modal.Footer>
-            <Button className="xbtn" onClick={onHide}> <BsXLg /> </Button>
+            <Button className="xbtn" onClick={onHide}>
+              {' '}
+              <BsXLg />{' '}
+            </Button>
           </Modal.Footer>
         </div>
       </div>

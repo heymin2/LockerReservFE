@@ -8,7 +8,6 @@ import B2 from '../area/B2';
 import C2 from '../area/C2';
 import { Routes, Route } from 'react-router-dom';
 
-
 const Mcenter = () => {
   return (
     <Routes>
@@ -20,6 +19,6 @@ const Mcenter = () => {
       <Route path="/E" element={<B2 />}></Route>
     </Routes>
   );
-}
+};
 
 export default Mcenter;
