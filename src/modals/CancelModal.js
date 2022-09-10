@@ -22,7 +22,7 @@ const CancelModal = ({ show, onHide, floor, part, hang, yeol }) => {
     };
 
     const onClickDelete = () => {
-        axios.post('http://13.125.255.247:5000/reservation/deleteInfo', body3)
+        axios.post('http://13.125.255.247:5000/deleteInfo', body3)
             .then((res) => {
                 console.log(res);
                 if (inputPass2 === '') {
