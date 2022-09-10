@@ -75,10 +75,10 @@ const ReservModal = ({ show, onHide, floor, part, hang, yeol }) => {
                         confirmButtonColor: '#0D3F7A',
                         confirmButtonText: '확인',
                     });
-                } else if (res.data === 'otherAR') {
+                } else if (res.data === 'other') {
                     Swal.fire({
                         title: 'Error',
-                        text: '이미 예약된 사물함입니다',
+                        text: '이미 예약된 사물함입니다. 다른 사물함을 예약해 주세요.',
                         icon: 'error',
                         confirmButtonColor: '#0D3F7A',
                         confirmButtonText: '확인',
