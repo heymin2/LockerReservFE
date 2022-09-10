@@ -1,8 +1,23 @@
 import React from 'react';
 import '../css/Right.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const In = () => {
+    const logout = {
+        logout: logout
+    };
+
+    const OnclickLogout = () => {
+        axios.post('http://13.125.255.247:5000/login/logout', logout)
+            .then((res) => {
+                console.log(res);
+                if (res === true) {
+                    window.location = '/';
+                }
+            });
+    };
+
     return (
         <aside className="asideright">
             <div className='profilebox'>
@@ -10,7 +25,7 @@ const In = () => {
                 <div className='txt'>
                     사물함<br /> 예약하지 않음
                 </div>
-                <Link to="/"><button className='logout' >로그아웃</button></Link>
+                <button className='logout' value='logout' onClick={OnclickLogout}>로그아웃</button>
             </div>
         </aside>
     );
