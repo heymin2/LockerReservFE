@@ -89,13 +89,23 @@ const LoginModal = ({ show, onHide }) => {
       } else if (res.data === 'TTLover') {
         Swal.fire({
           title: 'Error',
-          text: '비밀번호 3회 오류난 회원입니다. 문의해 주세요.',
+          text: '비밀번호 3회 오류난 회원입니다 문의해 주세요',
           icon: 'error',
           confirmButtonColor: '#0D3F7A',
           confirmButtonText: '확인',
         });
         document.location.replace('/Right');
-      } else if (res.data === 'Ruser') {
+      } else if (res.data === 'RuserFalse') {
+        Swal.fire({
+          title: 'Error',
+          text: '잘못 입력하셨습니다',
+          icon: 'error',
+          confirmButtonColor: '#0D3F7A',
+          confirmButtonText: '확인',
+        });
+        document.location.replace('/Right');
+      }
+      else if (res.data === 'Ruser') {
         // localStorage.setItem('isLogin', true);
         document.location.replace('/A');
       } else if (res.data === 'nonRuser') {
