@@ -56,10 +56,10 @@ const B1 = () => {
                         yeol={yeol}
                     />
                     <main>
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('1'); setYeol('1') }} alt="profile" />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('2') }} alt="profile" />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('3') }} alt="profile" />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('4') }} alt="profile" />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setHang('1'); setYeol('1') }} alt="profile" />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setYeol('2') }} alt="profile" />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setYeol('3') }} alt="profile" />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setYeol('4') }} alt="profile" />
                     </main>
                 </div >
             </div>

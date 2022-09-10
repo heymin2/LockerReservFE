@@ -76,7 +76,7 @@ const A1 = ({ component: Component }) => {
           <main>
             <img
               className="locker"
-              src={'파란사물함.png'}
+              src={'blue.png'}
               onClick={() => {
                 reservModalOn(true);
                 setHang('1');
@@ -86,7 +86,7 @@ const A1 = ({ component: Component }) => {
             />
             <img
               className="locker"
-              src={'파란사물함.png'}
+              src={'blue.png'}
               onClick={() => {
                 reservModalOn(true);
                 setYeol('2');
@@ -95,7 +95,7 @@ const A1 = ({ component: Component }) => {
             />
             <img
               className="locker"
-              src={'파란사물함.png'}
+              src={'blue.png'}
               onClick={() => {
                 reservModalOn(true);
                 setYeol('3');
@@ -104,7 +104,7 @@ const A1 = ({ component: Component }) => {
             />
             <img
               className="locker"
-              src={'파란사물함.png'}
+              src={'blue.png'}
               onClick={() => {
                 reservModalOn(true);
                 setYeol('4');

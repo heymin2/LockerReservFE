@@ -56,16 +56,16 @@ const C2 = () => {
                         yeol={yeol}
                     />
                     <main>
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('1') }} alt="profile" />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setYeol('2') }} alt="profile" /><br />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('2'); setYeol('1') }} alt="profile" />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('2'); setYeol('2') }} alt="profile" /><br />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('3'); setYeol('1') }} alt="profile" />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('3'); setYeol('2') }} alt="profile" /><br />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('4'); setYeol('1') }} alt="profile" />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('4'); setYeol('2') }} alt="profile" /><br />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('5'); setYeol('1') }} alt="profile" />
-                        <img className="locker" src={"파란사물함.png"} onClick={() => { reservModalOn(true); setHang('5'); setYeol('2') }} alt="profile" /><br />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setYeol('1') }} alt="profile" />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setYeol('2') }} alt="profile" /><br />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setHang('2'); setYeol('1') }} alt="profile" />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setHang('2'); setYeol('2') }} alt="profile" /><br />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setHang('3'); setYeol('1') }} alt="profile" />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setHang('3'); setYeol('2') }} alt="profile" /><br />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setHang('4'); setYeol('1') }} alt="profile" />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setHang('4'); setYeol('2') }} alt="profile" /><br />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setHang('5'); setYeol('1') }} alt="profile" />
+                        <img className="locker" src={"blue.png"} onClick={() => { reservModalOn(true); setHang('5'); setYeol('2') }} alt="profile" /><br />
                     </main>
                 </div >
             </div>

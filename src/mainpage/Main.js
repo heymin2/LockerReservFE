@@ -17,36 +17,33 @@ const Main = () => {
         <div className='box'>
           <Link to="/">
             <main>
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" /><br />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"회색사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" /><br />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"파란사물함.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" /><br />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" /><br />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
             </main>
           </Link>
         </div>

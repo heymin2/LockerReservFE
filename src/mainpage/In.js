@@ -1,6 +1,5 @@
 import React from 'react';
 import '../css/Right.css';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const In = () => {
