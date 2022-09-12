@@ -75,6 +75,14 @@ const A1 = ({ component: Component }) => {
             hang={hang}
             yeol={yeol}
           />
+          <CancelModal
+            show={cancelModal}
+            onHide={() => cancelModalOn(false)}
+            floor={'113'}
+            part={'A'}
+            hang={hang}
+            yeol={yeol}
+          />
           <main>
             <img
               className="locker"
