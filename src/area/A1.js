@@ -1,16 +1,18 @@
 import React, { Component, useState } from 'react';
 import '../css/lockerpage.css';
 import ReservModal from '../modals/ReservModal';
+import CancelModal from '../modals/CancelModal';
 import In from '../mainpage/In';
 import { Link, Navigate } from 'react-router-dom';
 // import isAdmin from '../isAdmin';
 
 const A1 = ({ component: Component }) => {
   const [reservModal, reservModalOn] = useState(false);
+  const [cancelModal, cancelModalOn] = useState(false);
   const [mapname, setmapname] = useState('113.png');
   const [hang, setHang] = useState('1');
   const [yeol, setYeol] = useState('');
-
+  const [locker, setlocker] = useState('blue');
   const onclickA1 = () => {
     setmapname('113.png');
   };
@@ -76,9 +78,13 @@ const A1 = ({ component: Component }) => {
           <main>
             <img
               className="locker"
-              src={'blue.png'}
+              src={locker + '.png'}
               onClick={() => {
-                reservModalOn(true);
+                if (locker == 'blue') {
+                  reservModalOn(true);
+                } else if (locker == 'red') {
+                  cancelModalOn(true);
+                }
                 setHang('1');
                 setYeol('1');
               }}
@@ -86,27 +92,27 @@ const A1 = ({ component: Component }) => {
             />
             <img
               className="locker"
-              src={'blue.png'}
+              src={locker + '.png'}
               onClick={() => {
-                reservModalOn(true);
+                // reservModalOn(true);
                 setYeol('2');
               }}
               alt="profile"
             />
             <img
               className="locker"
-              src={'blue.png'}
+              src={locker + '.png'}
               onClick={() => {
-                reservModalOn(true);
+                // reservModalOn(true);
                 setYeol('3');
               }}
               alt="profile"
             />
             <img
               className="locker"
-              src={'blue.png'}
+              src={locker + '.png'}
               onClick={() => {
-                reservModalOn(true);
+                // reservModalOn(true);
                 setYeol('4');
               }}
               alt="profile"
