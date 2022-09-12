@@ -11,12 +11,53 @@ const A1 = ({ component: Component }) => {
   const [reservModal, reservModalOn] = useState(false);
   const [cancelModal, cancelModalOn] = useState(false);
   const [mapname, setmapname] = useState('113.png');
-  const [hang, setHang] = useState('1');
-  const [yeol, setYeol] = useState('');
-  const [locker, setlocker] = useState('blue');
+  const [hang, setHang] = useState(1);
+  const [yeol, setYeol] = useState(1);
+
+  const lockers = [{
+    hang: 1,
+    yeol: 1,
+    status: 'blue'
+  }, {
+    hang: 1,
+    yeol: 2,
+    status: 'blue'
+  }, {
+    hang: 2,
+    yeol: 1,
+    status: 'blue'
+  }, {
+    hang: 2,
+    yeol: 2,
+    status: 'blue'
+  }]
+
   const onclickA1 = () => {
     setmapname('113.png');
+    axios.get('http://13.125.255.247:5000/reservation/A').then((res) => {
+      console.log(res);
+      for (var i = 0; i < res.data.length; i++) {
+        if (res.data[i].status === 'red') {
+          for (var j = 0; j < lockers.length; j++) {
+            if (res.data[i].hang === lockers[j].hang && res.data[i].yeol === lockers[j].yeol) {
+              lockers[j].status('red');
+              //locker[j].status = 'red';
+              break;
+            }
+          }
+        }
+        else if (res.data[i].status === 'grey') {
+          for (var j = 0; j < lockers.length; j++) {
+            if (res.data[i].hang === lockers[j].hang && res.data[i].yeol === lockers[j].yeol) {
+              lockers[j].status('grey');
+              //locker[j].status = 'grey';
+            }
+          }
+        }
+      }
+    });
   };
+
   const onclickB1 = () => {
     setmapname('114.png');
   };
@@ -29,21 +70,6 @@ const A1 = ({ component: Component }) => {
   const onclickC2 = () => {
     setmapname('220.png');
   };
-
-  axios.get('http://13.125.255.247:5000/reservation/A').then((res) => {
-    console.log(res);
-    if (res.status === 'red') {
-      if (res.hang === hang && res.yeol === yeol) {
-        setlocker('red');
-      }
-    }
-    else if (res.status === 'grey') {
-      if (res.hang === hang && res.yeol === yeol) {
-        setlocker('grey');
-      }
-    }
-  });
-
 
   return (
     <>
@@ -103,13 +129,15 @@ const A1 = ({ component: Component }) => {
           <main>
             <img
               className="locker"
-              src={locker + '.png'}
+              src={lockers[0].status + '.png'}
+              hang='1'
+              yeol='1'
               onClick={() => {
-                if (locker === 'blue') {
+                if (lockers[0].status === 'blue') {
                   reservModalOn(true);
-                } else if (locker === 'red') {
+                } else if (lockers[0].status === 'red') {
                   cancelModalOn(true);
-                } else if (locker === 'grey') {
+                } else if (lockers[0].status === 'grey') {
                   reservModalOn(false);
                 }
                 setHang('1');
@@ -119,28 +147,49 @@ const A1 = ({ component: Component }) => {
             />
             <img
               className="locker"
-              src={locker + '.png'}
+              src={lockers[1].status + '.png'}
               onClick={() => {
-                reservModalOn(true);
+                if (lockers[1].status === 'blue') {
+                  reservModalOn(true);
+                } else if (lockers[1].status === 'red') {
+                  cancelModalOn(true);
+                } else if (lockers[1].status === 'grey') {
+                  reservModalOn(false);
+                }
+                setHang('1');
                 setYeol('2');
               }}
               alt="profile"
             />
             <img
               className="locker"
-              src={locker + '.png'}
+              src={lockers[2].status + '.png'}
               onClick={() => {
-                reservModalOn(true);
-                setYeol('3');
+                if (lockers[2].status === 'blue') {
+                  reservModalOn(true);
+                } else if (lockers[2].status === 'red') {
+                  cancelModalOn(true);
+                } else if (lockers[2].status === 'grey') {
+                  reservModalOn(false);
+                }
+                setHang('2');
+                setYeol('1');
               }}
               alt="profile"
             />
             <img
               className="locker"
-              src={locker + '.png'}
+              src={lockers[3].status + '.png'}
               onClick={() => {
-                reservModalOn(true);
-                setYeol('4');
+                if (lockers[3].status === 'blue') {
+                  reservModalOn(true);
+                } else if (lockers[3].status === 'red') {
+                  cancelModalOn(true);
+                } else if (lockers[3].status === 'grey') {
+                  reservModalOn(false);
+                }
+                setHang('2');
+                setYeol('1');
               }}
               alt="profile"
             />
