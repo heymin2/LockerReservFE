@@ -47,10 +47,10 @@ const A1 = ({ component: Component }) => {
           }
         }
         else if (res.data[i].status === 'grey') {
-          for (var j = 0; j < lockers.length; j++) {
-            if (res.data[i].hang === lockers[j].hang && res.data[i].yeol === lockers[j].yeol) {
-              lockers[j].status('grey');
-              //locker[j].status = 'grey';
+          for (var k = 0; k < lockers.length; k++) {
+            if (res.data[i].hang === lockers[k].hang && res.data[i].yeol === lockers[k].yeol) {
+              lockers[k].status('grey');
+              //locker[k].status = 'grey';
             }
           }
         }
