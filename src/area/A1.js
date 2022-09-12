@@ -4,6 +4,7 @@ import ReservModal from '../modals/ReservModal';
 import CancelModal from '../modals/CancelModal';
 import In from '../mainpage/In';
 import { Link, Navigate } from 'react-router-dom';
+import axios from 'axios';
 // import isAdmin from '../isAdmin';
 
 const A1 = ({ component: Component }) => {
@@ -12,7 +13,7 @@ const A1 = ({ component: Component }) => {
   const [mapname, setmapname] = useState('113.png');
   const [hang, setHang] = useState('1');
   const [yeol, setYeol] = useState('');
-  const [locker, setlocker] = useState('red');
+  const [locker, setlocker] = useState('blue');
   const onclickA1 = () => {
     setmapname('113.png');
   };
@@ -28,6 +29,22 @@ const A1 = ({ component: Component }) => {
   const onclickC2 = () => {
     setmapname('220.png');
   };
+
+  axios.get('http://13.125.255.247:5000/reservation/A').then((res) => {
+    console.log(res);
+    if (res.status === 'red') {
+      if (res.hang === hang && res.yeol === yeol) {
+        setlocker('red');
+      }
+    }
+    else if (res.status === 'grey') {
+      if (res.hang === hang && res.yeol === yeol) {
+        setlocker('grey');
+      }
+    }
+  });
+
+
   return (
     <>
       {/* isAdmin() ? Component :{' '}
@@ -88,11 +105,11 @@ const A1 = ({ component: Component }) => {
               className="locker"
               src={locker + '.png'}
               onClick={() => {
-                if (locker == 'blue') {
+                if (locker === 'blue') {
                   reservModalOn(true);
-                } else if (locker == 'red') {
+                } else if (locker === 'red') {
                   cancelModalOn(true);
-                } else if (locker == 'grey') {
+                } else if (locker === 'grey') {
                   reservModalOn(false);
                 }
                 setHang('1');
