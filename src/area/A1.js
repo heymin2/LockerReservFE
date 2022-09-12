@@ -12,7 +12,7 @@ const A1 = ({ component: Component }) => {
   const [mapname, setmapname] = useState('113.png');
   const [hang, setHang] = useState('1');
   const [yeol, setYeol] = useState('');
-  const [locker, setlocker] = useState('blue');
+  const [locker, setlocker] = useState('red');
   const onclickA1 = () => {
     setmapname('113.png');
   };
@@ -92,6 +92,8 @@ const A1 = ({ component: Component }) => {
                   reservModalOn(true);
                 } else if (locker == 'red') {
                   cancelModalOn(true);
+                } else if (locker == 'grey') {
+                  reservModalOn(false);
                 }
                 setHang('1');
                 setYeol('1');
@@ -102,7 +104,7 @@ const A1 = ({ component: Component }) => {
               className="locker"
               src={locker + '.png'}
               onClick={() => {
-                // reservModalOn(true);
+                reservModalOn(true);
                 setYeol('2');
               }}
               alt="profile"
@@ -111,7 +113,7 @@ const A1 = ({ component: Component }) => {
               className="locker"
               src={locker + '.png'}
               onClick={() => {
-                // reservModalOn(true);
+                reservModalOn(true);
                 setYeol('3');
               }}
               alt="profile"
@@ -120,7 +122,7 @@ const A1 = ({ component: Component }) => {
               className="locker"
               src={locker + '.png'}
               onClick={() => {
-                // reservModalOn(true);
+                reservModalOn(true);
                 setYeol('4');
               }}
               alt="profile"
