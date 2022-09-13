@@ -44,7 +44,7 @@ const LoginModal = ({ show, onHide }) => {
   };
 
   const onClickLogin = () => {
-    axios.post('http://13.125.255.247:5000/login', body).then((res) => {
+    axios.post('http://52.78.124.15:5000/login', body).then((res) => {
       if (inputNum === '') {
         Swal.fire({
           title: '미입력',

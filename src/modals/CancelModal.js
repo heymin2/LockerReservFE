@@ -23,7 +23,7 @@ const CancelModal = ({ show, onHide, floor, part, hang, yeol }) => {
   };
 
   const onClickDelete = () => {
-    axios.post('http://13.125.255.247:5000/deleteInfo', body3).then((res) => {
+    axios.post('http://52.78.124.15:5000/deleteInfo', body3).then((res) => {
       console.log(res);
       if (inputPass2 === '') {
         Swal.fire({

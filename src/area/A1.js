@@ -14,6 +14,7 @@ const A1 = ({ component: Component }) => {
   const [hang, setHang] = useState(1);
   const [yeol, setYeol] = useState(1);
 
+
   const [lockers] = useState([
     {
       hang: 1,
@@ -26,19 +27,93 @@ const A1 = ({ component: Component }) => {
       status: 'blue',
     },
     {
-      hang: 2,
-      yeol: 1,
+      hang: 1,
+      yeol: 3,
       status: 'blue',
     },
     {
-      hang: 2,
-      yeol: 2,
+      hang: 1,
+      yeol: 4,
+      status: 'blue',
+    }, {
+      hang: 1,
+      yeol: 5,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 6,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 7,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 8,
+      status: 'blue',
+    }, {
+      hang: 1,
+      yeol: 9,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 10,
+      status: 'blue',
+    }, {
+      hang: 1,
+      yeol: 11,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 12,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 13,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 14,
+      status: 'blue',
+    }, {
+      hang: 1,
+      yeol: 15,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 16,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 17,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 18,
+      status: 'blue',
+    }, {
+      hang: 1,
+      yeol: 19,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 20,
       status: 'blue',
     },
   ]);
-
   useEffect(() => {
-    axios.get('http://13.125.255.247:5000/reservation/A').then((res) => {
+    axios.get('http://52.78.124.15:5000/reservation/A').then((res) => {
       console.log(res);
       console.log(lockers);
       for (var i = 0; i < res.data.length; i++) {
@@ -67,7 +142,7 @@ const A1 = ({ component: Component }) => {
         }
       }
     });
-    return () => {};
+    return () => { };
   }, [lockers]);
 
   const onclickA1 = () => {

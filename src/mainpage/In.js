@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const In = () => {
     const onClickLogout = () => {
-        axios.get('http://13.125.255.247:5000/login/logout')
+        axios.get('http://52.78.124.15:5000/login/logout')
             .then((res) => {
                 console.log(res);
                 if (res === true) {

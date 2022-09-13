@@ -32,7 +32,7 @@ const ReservModal = ({ show, onHide, floor, part, hang, yeol }) => {
     };
 
     const onClickReserv = () => {
-        axios.post('http://13.125.255.247:5000/reservation/locker', body2)
+        axios.post('http://52.78.124.15:5000/reservation/locker', body2)
             .then((res) => {
                 console.log(res);
                 if (inputNum2 === '') {
