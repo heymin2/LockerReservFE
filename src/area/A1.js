@@ -14,7 +14,7 @@ const A1 = ({ component: Component }) => {
   const [hang, setHang] = useState(1);
   const [yeol, setYeol] = useState(1);
 
-  const lockers = [{
+  const [lockers, setLockers] = useState([{
     hang: 1,
     yeol: 1,
     status: 'blue'
@@ -30,34 +30,33 @@ const A1 = ({ component: Component }) => {
     hang: 2,
     yeol: 2,
     status: 'blue'
-  }]
+  }]);
 
-  const onclickA1 = () => {
-    setmapname('113.png');
-    axios.get('http://13.125.255.247:5000/reservation/A').then((res) => {
-      console.log(res);
-      for (var i = 0; i < res.data.length; i++) {
-        if (res.data[i].status === 'red') {
-          for (var j = 0; j < lockers.length; j++) {
-            if (res.data[i].hang === lockers[j].hang && res.data[i].yeol === lockers[j].yeol) {
-              //lockers[j].status('red');
-              lockers[j].status = 'red';
-              break;
-            }
-          }
-        }
-        else if (res.data[i].status === 'grey') {
-          for (var k = 0; k < lockers.length; k++) {
-            if (res.data[i].hang === lockers[k].hang && res.data[i].yeol === lockers[k].yeol) {
-              //lockers[k].status('grey');
-              lockers[k].status = 'grey';
-              break;
-
-            }
+  axios.get('http://13.125.255.247:5000/reservation/A').then((res) => {
+    console.log(res);
+    console.log(lockers);
+    for (var i = 0; i < res.data.length; i++) {
+      if (res.data[i].status === 'red') {
+        for (var j = 0; j < lockers.length; j++) {
+          if (res.data[i].hang === lockers[j].hang && res.data[i].yeol === lockers[j].yeol) {
+            lockers[j].status = 'red';
+            break;
           }
         }
       }
-    });
+      else if (res.data[i].status === 'grey') {
+        for (var k = 0; k < lockers.length; k++) {
+          if (res.data[i].hang === lockers[k].hang && res.data[i].yeol === lockers[k].yeol) {
+            lockers[k].status = 'grey';
+            break;
+          }
+        }
+      }
+    }
+  });
+
+  const onclickA1 = () => {
+    setmapname('113.png');
   };
 
   const onclickB1 = () => {
@@ -72,7 +71,7 @@ const A1 = ({ component: Component }) => {
   const onclickC2 = () => {
     setmapname('220.png');
   };
-
+  console.log(lockers);
   return (
     <>
       {/* isAdmin() ? Component :{' '}
@@ -111,7 +110,7 @@ const A1 = ({ component: Component }) => {
         </Link>
       </aside>
       <div className="app-center">
-        <div className="box">
+        <div className="box" >
           <ReservModal
             show={reservModal}
             onHide={() => reservModalOn(false)}
