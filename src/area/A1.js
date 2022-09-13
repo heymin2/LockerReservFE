@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import '../css/lockerpage.css';
 import ReservModal from '../modals/ReservModal';
 import CancelModal from '../modals/CancelModal';
@@ -14,7 +14,7 @@ const A1 = ({ component: Component }) => {
   const [hang, setHang] = useState(1);
   const [yeol, setYeol] = useState(1);
 
-  const [lockers, setLockers] = useState([{
+  const [lockers,] = useState([{
     hang: 1,
     yeol: 1,
     status: 'blue'
@@ -32,28 +32,34 @@ const A1 = ({ component: Component }) => {
     status: 'blue'
   }]);
 
-  axios.get('http://13.125.255.247:5000/reservation/A').then((res) => {
-    console.log(res);
-    console.log(lockers);
-    for (var i = 0; i < res.data.length; i++) {
-      if (res.data[i].status === 'red') {
-        for (var j = 0; j < lockers.length; j++) {
-          if (res.data[i].hang === lockers[j].hang && res.data[i].yeol === lockers[j].yeol) {
-            lockers[j].status = 'red';
-            break;
+
+
+  useEffect(() => {
+    axios.get('http://13.125.255.247:5000/reservation/A').then((res) => {
+      console.log(res);
+      console.log(lockers);
+      for (var i = 0; i < res.data.length; i++) {
+        if (res.data[i].status === 'red') {
+          for (var j = 0; j < lockers.length; j++) {
+            if (res.data[i].hang === lockers[j].hang && res.data[i].yeol === lockers[j].yeol) {
+              lockers[j].status = 'red';
+              break;
+            }
+          }
+        }
+        else if (res.data[i].status === 'grey') {
+          for (var k = 0; k < lockers.length; k++) {
+            if (res.data[i].hang === lockers[k].hang && res.data[i].yeol === lockers[k].yeol) {
+              lockers[k].status = 'grey';
+              break;
+            }
           }
         }
       }
-      else if (res.data[i].status === 'grey') {
-        for (var k = 0; k < lockers.length; k++) {
-          if (res.data[i].hang === lockers[k].hang && res.data[i].yeol === lockers[k].yeol) {
-            lockers[k].status = 'grey';
-            break;
-          }
-        }
-      }
+    });
+    return () => {
     }
-  });
+  }, [lockers]);
 
   const onclickA1 = () => {
     setmapname('113.png');
@@ -71,7 +77,6 @@ const A1 = ({ component: Component }) => {
   const onclickC2 = () => {
     setmapname('220.png');
   };
-  console.log(lockers);
   return (
     <>
       {/* isAdmin() ? Component :{' '}
@@ -131,8 +136,6 @@ const A1 = ({ component: Component }) => {
             <img
               className="locker"
               src={lockers[0].status + '.png'}
-              hang='1'
-              yeol='1'
               onClick={() => {
                 if (lockers[0].status === 'blue') {
                   reservModalOn(true);
