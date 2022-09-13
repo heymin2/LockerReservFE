@@ -50,6 +50,7 @@ const A1 = ({ component: Component }) => {
           for (var k = 0; k < lockers.length; k++) {
             if (res.data[i].hang === lockers[k].hang && res.data[i].yeol === lockers[k].yeol) {
               lockers[k].status('grey');
+              break;
               //locker[k].status = 'grey';
             }
           }
