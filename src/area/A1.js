@@ -14,25 +14,28 @@ const A1 = ({ component: Component }) => {
   const [hang, setHang] = useState(1);
   const [yeol, setYeol] = useState(1);
 
-  const [lockers,] = useState([{
-    hang: 1,
-    yeol: 1,
-    status: 'blue'
-  }, {
-    hang: 1,
-    yeol: 2,
-    status: 'blue'
-  }, {
-    hang: 2,
-    yeol: 1,
-    status: 'blue'
-  }, {
-    hang: 2,
-    yeol: 2,
-    status: 'blue'
-  }]);
-
-
+  const [lockers] = useState([
+    {
+      hang: 1,
+      yeol: 1,
+      status: 'blue',
+    },
+    {
+      hang: 1,
+      yeol: 2,
+      status: 'blue',
+    },
+    {
+      hang: 2,
+      yeol: 1,
+      status: 'blue',
+    },
+    {
+      hang: 2,
+      yeol: 2,
+      status: 'blue',
+    },
+  ]);
 
   useEffect(() => {
     axios.get('http://13.125.255.247:5000/reservation/A').then((res) => {
@@ -41,24 +44,30 @@ const A1 = ({ component: Component }) => {
       for (var i = 0; i < res.data.length; i++) {
         if (res.data[i].status === 'red') {
           for (var j = 0; j < lockers.length; j++) {
-            if (res.data[i].hang === lockers[j].hang && res.data[i].yeol === lockers[j].yeol) {
+            if (
+              res.data[i].hang === lockers[j].hang &&
+              res.data[i].yeol === lockers[j].yeol
+            ) {
               lockers[j].status = 'red';
+              document.getElementsByClassName('locker')[j].src = 'red.png';
               break;
             }
           }
-        }
-        else if (res.data[i].status === 'grey') {
+        } else if (res.data[i].status === 'grey') {
           for (var k = 0; k < lockers.length; k++) {
-            if (res.data[i].hang === lockers[k].hang && res.data[i].yeol === lockers[k].yeol) {
+            if (
+              res.data[i].hang === lockers[k].hang &&
+              res.data[i].yeol === lockers[k].yeol
+            ) {
               lockers[k].status = 'grey';
+              document.getElementsByClassName('locker')[k].src = 'grey.png';
               break;
             }
           }
         }
       }
     });
-    return () => {
-    }
+    return () => {};
   }, [lockers]);
 
   const onclickA1 = () => {
@@ -115,7 +124,7 @@ const A1 = ({ component: Component }) => {
         </Link>
       </aside>
       <div className="app-center">
-        <div className="box" >
+        <div className="box">
           <ReservModal
             show={reservModal}
             onHide={() => reservModalOn(false)}
