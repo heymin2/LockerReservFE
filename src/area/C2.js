@@ -131,8 +131,8 @@ const C2 = () => {
                     />  <CancelModal
                         show={cancelModal}
                         onHide={() => cancelModalOn(false)}
-                        floor={'113'}
-                        part={'A'}
+                        floor={'219'}
+                        part={'D'}
                         hang={hang}
                         yeol={yeol}
                     />
