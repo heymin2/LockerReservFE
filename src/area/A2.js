@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import '../css/lockerpage.css';
 import ReservModal from '../modals/ReservModal';
+import CancelModal from '../modals/CancelModal';
 import In from '../mainpage/In';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import axios from 'axios';
+// import isAdmin from '../isAdmin';
 
-const A2 = () => {
+const A2 = ({ component: Component }) => {
   const [reservModal, reservModalOn] = useState(false);
+  const [cancelModal, cancelModalOn] = useState(false);
   const [mapname, setmapname] = useState('214.png');
   const [hang, setHang] = useState('1');
   const [yeol, setYeol] = useState('')
