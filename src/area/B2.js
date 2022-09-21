@@ -510,6 +510,8 @@ const B2 = () => {
 
     return (
         <>
+            {/* isAdmin() ? Component :{' '}
+      <Navigate to="/" {...alert('접근할 수 없는 페이지입니다.')} /> */}
             <aside className='asideleft'>
                 <img className='map' src={mapname} alt="profile"></img>
                 <Link to="/A">
@@ -533,6 +535,14 @@ const B2 = () => {
                     <ReservModal
                         show={reservModal}
                         onHide={() => reservModalOn(false)}
+                        floor={'220'}
+                        part={'E'}
+                        hang={hang}
+                        yeol={yeol}
+                    />
+                    <CancelModal
+                        show={cancelModal}
+                        onHide={() => cancelModalOn(false)}
                         floor={'220'}
                         part={'E'}
                         hang={hang}
