@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import PIC from '../PIC';
 import '../scss/Login.scss';
@@ -34,18 +34,17 @@ const LoginModal = ({ show, onHide }) => {
     if (regex.test(e.target.value)) {
       setInputPass3(e.target.value);
     }
-  }
+  };
 
   let body = {
     studentID: inputNum,
     name: inputName,
     phone: inputPhone,
-    password: inputPass3
+    password: inputPass3,
   };
 
   const onClickLogin = () => {
-    axios.post('http://13.125.255.247:5000/login', body).then((res) => {
-      console.log(res);
+    axios.post('http://52.78.124.15:5000/login', body).then((res) => {
       if (inputNum === '') {
         Swal.fire({
           title: '미입력',
@@ -90,16 +89,28 @@ const LoginModal = ({ show, onHide }) => {
       } else if (res.data === 'TTLover') {
         Swal.fire({
           title: 'Error',
-          text: '비밀번호 3회 오류난 회원입니다. 문의해 주세요.',
+          text: '비밀번호 3회 오류난 회원입니다 문의해 주세요',
           icon: 'error',
           confirmButtonColor: '#0D3F7A',
           confirmButtonText: '확인',
         });
         document.location.replace('/Right');
-      } else if (res.data === 'Ruser') {
-        document.location.replace('/A1');
+      } else if (res.data === 'RuserFalse') {
+        Swal.fire({
+          title: 'Error',
+          text: '잘못 입력하셨습니다',
+          icon: 'error',
+          confirmButtonColor: '#0D3F7A',
+          confirmButtonText: '확인',
+        });
+        document.location.replace('/Right');
+      }
+      else if (res.data === 'Ruser') {
+        // localStorage.setItem('isLogin', true);
+        document.location.replace('/A');
       } else if (res.data === 'nonRuser') {
-        document.location.replace('/A1');
+        // localStorage.setItem('isLogin', true);
+        document.location.replace('/A');
       }
     });
   };
@@ -117,15 +128,62 @@ const LoginModal = ({ show, onHide }) => {
           <div className="rect" />
           <p className="word">사물함 로그인</p>
           <form method="post">
-            <input type="text" name="Num" className="num" value={inputNum} onChange={HandleInputNum} placeholder="학번 ex)22121234" minLength="8" maxLength="8" required />
-            <input type="text" name="Name" className="name" value={inputName} onChange={HandleInputName} placeholder="이름 ex)김컴공" minLength="3" maxLength="4" required />
-            <input type="tel" name="phoneNum" className="phoneNum" value={inputPhone} onChange={HandleInputPhone} placeholder="전화번호 ex)12345078" minLength="8" maxLength="8" required />
-            <input type="text" className="pass3" value={inputPass3} onChange={HandleInputPass3} placeholder='비밀번호 4자리' minLength="4" maxLength="4" required />
+            <input
+              type="text"
+              name="Num"
+              className="num"
+              value={inputNum}
+              onChange={HandleInputNum}
+              placeholder="학번 ex)22121234"
+              minLength="8"
+              maxLength="8"
+              required
+            />
+            <input
+              type="text"
+              name="Name"
+              className="name"
+              value={inputName}
+              onChange={HandleInputName}
+              placeholder="이름 ex)김컴공"
+              minLength="3"
+              maxLength="4"
+              required
+            />
+            <input
+              type="tel"
+              name="phoneNum"
+              className="phoneNum"
+              value={inputPhone}
+              onChange={HandleInputPhone}
+              placeholder="전화번호 ex)12345078"
+              minLength="8"
+              maxLength="8"
+              required
+            />
+            <input
+              type="text"
+              className="pass3"
+              value={inputPass3}
+              onChange={HandleInputPass3}
+              placeholder="비밀번호 4자리"
+              minLength="4"
+              maxLength="4"
+              required
+            />
             <PIC />
-            <input type="button" className="logbtn" onClick={onClickLogin} value="로그인" />
+            <input
+              type="button"
+              className="logbtn"
+              onClick={onClickLogin}
+              value="로그인"
+            />
           </form>
           <Modal.Footer>
-            <Button className="xbtn" onClick={onHide}> <BsXLg /> </Button>
+            <Button className="xbtn" onClick={onHide}>
+              {' '}
+              <BsXLg />{' '}
+            </Button>
           </Modal.Footer>
         </div>
       </div>

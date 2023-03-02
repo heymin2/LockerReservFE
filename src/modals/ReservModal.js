@@ -5,10 +5,9 @@ import '../scss/Reserv.scss';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
-const SignUpModal = ({ show, onHide }) => {
+const ReservModal = ({ show, onHide, floor, part, hang, yeol }) => {
     const [inputPass, setInputPass] = useState('')
     const [inputNum2, setInputNum2] = useState('')
-
 
     const HandleInputPass = (e) => {
         const regex = /^[0-9]{0,13}$/;
@@ -26,11 +25,14 @@ const SignUpModal = ({ show, onHide }) => {
 
     let body2 = {
         studentID: inputNum2,
-        password: inputPass
+        password: inputPass,
+        part: part,
+        hang: hang,
+        yeol: yeol
     };
 
     const onClickReserv = () => {
-        axios.post('http://13.125.255.247:5000/login', body2)
+        axios.post('http://52.78.124.15:5000/reservation/locker', body2)
             .then((res) => {
                 console.log(res);
                 if (inputNum2 === '') {
@@ -49,14 +51,6 @@ const SignUpModal = ({ show, onHide }) => {
                         confirmButtonColor: '#0D3F7A',
                         confirmButtonText: '확인',
                     });
-                } else if (res.data === 'duplicatedUser') {
-                    Swal.fire({
-                        title: 'Error',
-                        text: '잘못 입력하셨습니다',
-                        icon: 'error',
-                        confirmButtonColor: '#0D3F7A',
-                        confirmButtonText: '확인',
-                    });
                 } else if (res.data === 'TTLover') {
                     Swal.fire({
                         title: 'Error',
@@ -65,7 +59,39 @@ const SignUpModal = ({ show, onHide }) => {
                         confirmButtonColor: '#0D3F7A',
                         confirmButtonText: '확인',
                     });
-                    // 예약 완료됐다는 데이터 받으면 빨간색 처리 - 데이터 뭘로 줌?
+                } else if (res.data === 'wrongPW') {
+                    Swal.fire({
+                        title: 'Error',
+                        text: '비밀번호를 틀렸습니다',
+                        icon: 'error',
+                        confirmButtonColor: '#0D3F7A',
+                        confirmButtonText: '확인',
+                    });
+                } else if (res.data === 'userAR') {
+                    Swal.fire({
+                        title: 'Error',
+                        text: '이미 사물함을 예약하셨습니다. 기존 사물함을 취소하고 예약해 주세요',
+                        icon: 'error',
+                        confirmButtonColor: '#0D3F7A',
+                        confirmButtonText: '확인',
+                    });
+                } else if (res.data === 'other') {
+                    Swal.fire({
+                        title: 'Error',
+                        text: '이미 예약된 사물함입니다. 다른 사물함을 예약해 주세요.',
+                        icon: 'error',
+                        confirmButtonColor: '#0D3F7A',
+                        confirmButtonText: '확인',
+                    });
+                }
+                else if (res.data === true) {
+                    Swal.fire({
+                        title: 'Success',
+                        text: '예약 완료되었습니다',
+                        icon: 'success',
+                        confirmButtonColor: '#0D3F7A',
+                        confirmButtonText: '확인',
+                    }, document.location.replace(`/${part}`));
                 }
             });
     };
@@ -82,7 +108,7 @@ const SignUpModal = ({ show, onHide }) => {
                     <div className='rect2' />
                     <p className="word2">사물함 예약</p>
                     <form method="post">
-                        <p className="res">선택한 사물함</p>
+                        <p className="res"><c style={{ color: 'grey' }}>선택한 사물함</c><br />{floor}호 {hang}행 {yeol}열</p>
                         <input type="text" className="pass" value={inputPass} onChange={HandleInputPass} placeholder='비밀번호 4자리' minLength="4" maxLength="4" required />
                         <input type="text" className="num2" value={inputNum2} onChange={HandleInputNum2} placeholder='학번 ex)22121234' minLength="8" maxLength="8" required />
                         <p className='hint'><b>사물함 예약 변경하기 위해서<br /> 비밀번호가 꼭 필요하니<br />기억할 수 있는 번호로<br /> 설정해 주세요</b></p>
@@ -93,8 +119,8 @@ const SignUpModal = ({ show, onHide }) => {
                     </Modal.Footer>
                 </div>
             </div>
-        </Modal>
+        </Modal >
     )
 }
 
-export default SignUpModal
+export default ReservModal;
