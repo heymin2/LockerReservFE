@@ -1,8 +1,13 @@
 import '../css/lockerpage.css';
+import ReservModal from '../modals/ReservModal';
+import CancelModal from '../modals/CancelModal';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Left.css';
 import Right from './Right';
 const Main = () => {
+  const [reservModal, reservModalOn] = useState(false);
+  const [cancelModal, cancelModalOn] = useState(false);
   return (
     <>
       <aside className='asideleft'>
@@ -15,11 +20,27 @@ const Main = () => {
       </aside>
       <div className="app-center">
         <div className='box'>
+          <ReservModal
+            show={reservModal}
+            onHide={() => reservModalOn(false)}
+            floor={'113'}
+            part={'A'}
+            hang={'1'}
+            yeol={'1'}
+          />
+          <CancelModal
+            show={cancelModal}
+            onHide={() => cancelModalOn(false)}
+            floor={'113'}
+            part={'A'}
+            hang={'1'}
+            yeol={'2'}
+          />
           <Link to="/">
             <main>
-              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
-              <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
+              <img className="locker" src={"blue.png"} onClick={() => reservModalOn(true)} alt="profile" />
+              <img className="locker" src={"red.png"} onClick={() => cancelModalOn(true)} alt="profile" />
+              <img className="locker" src={"grey.png"} onClick={() => alert('로그인하세요')} alt="profile" />
               <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
               <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
               <img className="locker" src={"blue.png"} onClick={() => alert('로그인하세요')} alt="profile" />
