@@ -35,7 +35,7 @@ npm start
 
 ### 1. 사물함, 호 버튼 클릭
 ![b](https://user-images.githubusercontent.com/97522726/222510510-00260148-dc0d-4d77-b814-38f3f8d4c32f.png)
-* 무조건 로그인 하세요라는 창이 뜸 
+* 무조건 '로그인하세요'라는 창이 뜸 
 
 ### 2. 로그인 버튼 클릭
 ![login](https://user-images.githubusercontent.com/97522726/222482383-38be5538-9d54-4294-b89a-e3b1d9224eee.png)
