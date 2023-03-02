@@ -4,7 +4,7 @@
 
 ## 특이점
 1. 로그인은 있으나 회원가입이 없음 -> 비회원 로그인 시스템 이용
-2. 파랑, 빨강, 회색 세 개의 사물함이 존재 (파랑: 예약 가능 / 빨강: 본인이 예약 중 / 회색: 예약 중)
+2. 파랑, 빨강, 회색 세 개의 사물함이 존재
 3. 리액트 처음 사용
 
 ## 실패 이유
@@ -34,22 +34,27 @@ npm start
 ![main](https://user-images.githubusercontent.com/97522726/222481500-2df8af16-fa96-4dd3-807c-74dfaaf1a02c.png)
 
 ### 1. 사물함, 호 버튼 클릭
-![before](https://user-images.githubusercontent.com/97522726/222482023-b4edd226-3fb7-4581-9986-ad87222abfa5.png)
+![b](https://user-images.githubusercontent.com/97522726/222510510-00260148-dc0d-4d77-b814-38f3f8d4c32f.png)
 * 무조건 로그인 하세요라는 창이 뜸 
-
-* 위의 빨강, 회색 사물함은 서버 안 열고 사물함 상태 확인할 수 있도록 해둠
 
 ### 2. 로그인 버튼 클릭
 ![login](https://user-images.githubusercontent.com/97522726/222482383-38be5538-9d54-4294-b89a-e3b1d9224eee.png)
 * 위에 맞게 작성해서 로그인 하면 성공함
 
 ## 로그인 후
-
+![m](https://user-images.githubusercontent.com/97522726/222510722-2e6c5165-8e5e-4269-9c05-3b7a5d7fbb3c.png)
+ * 파랑: 예약 가능 
+ * 빨강: 본인이 예약 중 
+ * 회색: 다른 사람이 예약 중
+ * 현재는 기능 확인을 위해 이 화면이 첫 페이지임
+ 
 ### 1. 사물함 예약
 ![reserve](https://user-images.githubusercontent.com/97522726/222483735-63011362-53b4-40cc-9aad-afef12611323.png)
+* 파랑 사물함 버튼 클릭
 
 ### 2. 사물함 예약 취소
 ![cancel](https://user-images.githubusercontent.com/97522726/222483893-c63a82ff-39fc-414a-a5a9-f08587884511.png)
+* 빨강 사물함 버튼 클릭
 
 ## 그 외
 ![talk](https://user-images.githubusercontent.com/97522726/222484173-69ff4bd5-1281-497c-8604-f591bf1c675d.png)
